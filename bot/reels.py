@@ -3,6 +3,7 @@
 The Florida look, deliberately unlike Minneapolis (centered, black, yellow/red DejaVu):
 Gulf-teal gradient, sunset-coral accents, sand text, Anton + Barlow, left-aligned layout, rounded photo
 with a slow zoom-OUT, a tilted charge-level stamp on the photo, and a degree chip per charge.
+County, date and bond live in the caption, not on the Reel.
 
 Layers, bottom to top: background card (gradient + all text) -> zooming photo -> overlay (rounded corners,
 border, stamp). Text stays clear of Instagram's Reel UI: nothing below y=1640 or right of x=940 under y=1000.
@@ -11,7 +12,6 @@ Reels are written to reels/ and served only from GitHub Pages (never committed).
 import os
 import subprocess
 import tempfile
-from datetime import date
 from functools import lru_cache
 
 from PIL import Image, ImageDraw, ImageFont
@@ -20,10 +20,9 @@ from . import config, posting_queue
 
 W, H, FPS = 1080, 1920, 30
 MARGIN = 90
-PX, PY, PW, PH = 90, 330, 720, 900       # Photo window (mugshots are 4:5)
+PX, PY, PW, PH = 90, 250, 720, 900       # Photo window (mugshots are 4:5)
 RADIUS, BORDER = 36, 8
 C = config.COLORS
-MONTHS = "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC".split()
 
 
 @lru_cache(maxsize=None)
@@ -102,22 +101,6 @@ def _pill(d, x, y, text, fill=None, size=34):
 def _background(b):
     img, d = _canvas(W, H)
     _header(d, 130)
-
-    # Pill: county, booking date, bond
-    booked = date.fromisoformat(b["booked"])
-    pill = [f"{b['county'].upper()} COUNTY", f"{MONTHS[booked.month - 1]} {booked.day}"]
-    if b.get("bond"):
-        pill.append(f"BOND ${b['bond']:,.0f}")
-    _pill(d, MARGIN, 190, "  •  ".join(pill))
-
-    # Booking number, running down the empty column right of the photo
-    label = f"BOOKING #{b['booking_number']}" if b.get("booking_number") else ""
-    if label:
-        lf = font("Barlow-Bold.ttf", 30)
-        strip = Image.new("RGBA", (int(d.textlength(label, font=lf)) + 4, 40), (0, 0, 0, 0))
-        ImageDraw.Draw(strip).text((0, 20), label, font=lf, fill=C["muted"] + (255,), anchor="lm")
-        strip = strip.rotate(-90, expand=True)
-        img.paste(strip, (PX + PW + 40, PY + 140), strip)
 
     # Name + age
     y = PY + PH + 110
@@ -306,7 +289,7 @@ def render_news_reel(card, out_path, seconds=config.REEL_SECONDS):
 
 
 SAMPLE = {
-    "id": "sample-1", "booking_number": "1033699", "county": "Lee", "booked": "2026-10-09", "name": "SAMPLE, JORDAN ALEX", "age": 34,
+    "id": "sample-1", "county": "Lee", "booked": "2026-10-09", "name": "SAMPLE, JORDAN ALEX", "age": 34,
     "bond": 25000.0, "charges": [
         {"desc": "Aggravated battery with a deadly weapon", "level": "Felony", "degree": "SECOND"},
         {"desc": "Resisting officer without violence", "level": "Misdemeanor", "degree": "FIRST"},

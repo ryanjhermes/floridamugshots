@@ -439,13 +439,14 @@
         "agency": "FORT MYERS POLICE DEPT",
         "in_custody": true,
         "charge_score": 7.2,
-        "photo": "mugshots/lee-1033805.jpg",
+        "photo": null,
         "photo_score": 0.84,
         "score": 0.708,
-        "reel": "reels/lee-1033805.mp4"
+        "reel": "reels/lee-1033805.mp4",
+        "media_id": "17987980992067082"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-11T12:38:17.554849-04:00",
       "id": 9
     },
     {

@@ -141,11 +141,11 @@ NEWS_MIN_CRIME = 0.5                  # Zero-shot "is this about a crime or arre
 NEWS_TRAGEDY_PENALTY = 0.5            # x "people were killed" probability: deaths aren't the outlandish we want
 NEWS_FLAVOR_BONUS = 0.35              # Added when the story reads as Florida-flavored (labels or fl-* keywords)
 NEWS_MUGSHOT_MIN = 0.8                # CLIP check before we show a story's lead image (booking photos only)
-# (source, region, RSS URL). Statewide on purpose: this is how South Florida and Tampa get covered
+# (source, region, RSS URL). Statewide on purpose: this is how South Florida and Tampa get covered.
+# Local 10 (Miami) works locally but returns 403 to GitHub runners, so it's left out
 NEWS_FEEDS = [
     ("WSVN 7News", "Miami", "https://www.wsvn.com/news/local/feed/"),
     ("NBC 6 South Florida", "Miami", "https://www.nbcmiami.com/news/local/feed/"),
-    ("Local 10", "Miami", "https://www.local10.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml"),
     ("FOX 13", "Tampa Bay", "https://www.fox13news.com/rss/category/news"),
     ("WFLA 8", "Tampa Bay", "https://www.wfla.com/news/feed/"),
     ("News 6", "Orlando", "https://www.clickorlando.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml"),

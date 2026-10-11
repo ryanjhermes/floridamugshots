@@ -101,6 +101,9 @@ Mon      token-refresh       extends the 60-day Instagram token and stores it ba
 - **Orange:** the PDF is regenerated ~1:07 AM and only covers the latest day. Photos (`getInmateDetails`, POST
   with body `id=`) are empty once someone is released, so released bookings drop out at the photo stage.
 
+- **News feeds:** Local 10 (WPLG Miami) returns 403 to GitHub runners (fine locally), so it's not in
+  `NEWS_FEEDS`. Scoring ~90 stories takes ~4 min on a runner.
+
 ## Environment (`.env` locally; repo secrets in CI)
 
 `IG_ACCESS_TOKEN`, `IG_USER_ID` (posting); `IG_APP_ID`, `IG_APP_SECRET` (OAuth fallback only); `PAGES_URL`

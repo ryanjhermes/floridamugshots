@@ -376,13 +376,14 @@
         "agency": "Polk County Sheriffs Office",
         "in_custody": true,
         "charge_score": 5.21,
-        "photo": "mugshots/polk-2630824.jpg",
+        "photo": null,
         "photo_score": 0.56,
         "score": 0.69,
-        "reel": "reels/polk-2630824.mp4"
+        "reel": "reels/polk-2630824.mp4",
+        "media_id": "18424392049155238"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-10T23:17:36.921928-04:00",
       "id": 8
     },
     {

@@ -15,7 +15,6 @@ MODEL_NAME = "openai/clip-vit-base-patch32"
 # Edit these to change what "stands out" means
 DISTINCTIVE_PROMPTS = [
     "a mugshot of a person with face tattoos",
-    "a mugshot of a person with neck or head tattoos",
     "a mugshot of a person with brightly dyed hair",
     "a mugshot of a person with a wild, unusual hairstyle",
     "a mugshot of a person making a funny or exaggerated facial expression",

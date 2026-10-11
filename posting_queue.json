@@ -1,0 +1,475 @@
+{
+  "created_at": "2026-10-10T21:13:54.372888-04:00",
+  "day": "2026-10-09",
+  "entries": [
+    {
+      "data": {
+        "id": "lee-1033732",
+        "county": "Lee",
+        "booking_number": "1033732",
+        "booked": "2026-10-09",
+        "name": "SANDERS, SAMMIE LEE III",
+        "age": 31,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "ROBBERY (COMMIT ROBBERY WITH FIREARM)",
+            "statute": "812.13-2a",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 2
+          },
+          {
+            "desc": "PROB VIOLATION",
+            "statute": "948.06",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 2
+          }
+        ],
+        "bond": null,
+        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "in_custody": true,
+        "charge_score": 5.8,
+        "photo": "mugshots/lee-1033732.jpg",
+        "photo_score": 1.0,
+        "score": 0.965,
+        "reel": "reels/lee-1033732.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 1
+    },
+    {
+      "data": {
+        "id": "orange-26033520",
+        "county": "Orange",
+        "booking_number": "26033520",
+        "booked": "2026-10-09",
+        "name": "CRESPO, EDWIN",
+        "age": 34,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "TRAFFICKING IN 4 GRAMS OR MORE OF FENTANYL (3 YEAR MIN MAN)",
+            "statute": "893.135(1)(C)(4)(A)",
+            "level": "Felony",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "POSS. OF FIREARM IN COMMISSION OF FELONY",
+            "statute": "790.07(2)",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
+            "statute": "843.02",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "CARRY FIREARM IN PLACE PROHIBITED BY LAW",
+            "statute": "790.06(12)(A)",
+            "level": "Misdemeanor",
+            "degree": "SECOND",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "OTHER AGENCIES",
+        "in_custody": true,
+        "charge_score": 5.9,
+        "photo": "mugshots/orange-26033520.jpg",
+        "photo_score": 0.87,
+        "score": 0.931,
+        "reel": "reels/orange-26033520.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 2
+    },
+    {
+      "data": {
+        "id": "lee-1033711",
+        "county": "Lee",
+        "booking_number": "1033711",
+        "booked": "2026-10-09",
+        "name": "VILSAINT, MAKENSON",
+        "age": 32,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "AGGRAV BATTERY (AGGRAV BATTERY WITH A DEADLY WEAPON)",
+            "statute": "784.045-1a2",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          }
+        ],
+        "bond": 50000.0,
+        "agency": "FORT MYERS POLICE DEPT",
+        "in_custody": true,
+        "charge_score": 5.35,
+        "photo": "mugshots/lee-1033711.jpg",
+        "photo_score": 0.86,
+        "score": 0.832,
+        "reel": "reels/lee-1033711.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 3
+    },
+    {
+      "data": {
+        "id": "polk-2630828",
+        "county": "Polk",
+        "booking_number": "2630828",
+        "booked": "2026-10-09",
+        "name": "HILL, KENDRICK JERVARA",
+        "age": 38,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Traffick Amphetamine Methamphet. 2",
+            "statute": "893.135.1F1B",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) TRAFFICK AMPHETAMINE METHAMPHET 28 200 GR",
+            "count": 1
+          },
+          {
+            "desc": "Possess Structure Veh Know Sell Dr",
+            "statute": "893.1351.2",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) POSS STRUC VEH KNOW SELL DRUGS",
+            "count": 1
+          },
+          {
+            "desc": "Resist Officer without Violence",
+            "statute": "843.02",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) ROWOV",
+            "count": 1
+          },
+          {
+            "desc": "POSS OF DRUG PARAPHERNAL",
+            "statute": "893.147.1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) POSS OF DRUG PARA",
+            "count": 1
+          }
+        ],
+        "bond": 117000.0,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 4.93,
+        "photo": "mugshots/polk-2630828.jpg",
+        "photo_score": 0.92,
+        "score": 0.79,
+        "reel": "reels/polk-2630828.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 4
+    },
+    {
+      "data": {
+        "id": "orange-26033538",
+        "county": "Orange",
+        "booking_number": "26033538",
+        "booked": "2026-10-09",
+        "name": "POLYNICE, VEDA MARIE",
+        "age": 40,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "BATTERY ON LAW ENFORCEMENT OFFICER",
+            "statute": "784.07(2)(B)-3",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "RESISTING OFFICER WITH VIOLENCE",
+            "statute": "843.01(1)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "POSSESSION OF DRUG PARAPHERNALIA",
+            "statute": "893.147(1)-4",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
+            "statute": "843.02",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 5.4,
+        "photo": "mugshots/orange-26033538.jpg",
+        "photo_score": 0.7,
+        "score": 0.778,
+        "reel": "reels/orange-26033538.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 5
+    },
+    {
+      "data": {
+        "id": "orange-26033544",
+        "county": "Orange",
+        "booking_number": "26033544",
+        "booked": "2026-10-09",
+        "name": "JACKSON, JAHMEIL CARLTON",
+        "age": 29,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "AGGRAVATED BATTERY (GREAT BODILY HARM)",
+            "statute": "784.045(1)(A)(1)",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "AGGRAVATED ASSAULT (DOMESTIC VIOLENCE)",
+            "statute": "784.021(1)(A)-17",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 5.3,
+        "photo": "mugshots/orange-26033544.jpg",
+        "photo_score": 0.57,
+        "score": 0.709,
+        "reel": "reels/orange-26033544.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 6
+    },
+    {
+      "data": {
+        "id": "lee-1033740",
+        "county": "Lee",
+        "booking_number": "1033740",
+        "booked": "2026-10-09",
+        "name": "RORICK, JENNIFER JOY",
+        "age": 53,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "CRUELTY TO ANIMALS",
+            "statute": "828.12-2",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "LARC (PETIT THEFT MERCH/FARM/TRANSIT $100-$750)",
+            "statute": "812.014-2f",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "FRAUD-SWINDLE (DEFRAUD TO OBTAIN PROPERTY VALUE OF LT $20K)",
+            "statute": "817.034-4a3",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          }
+        ],
+        "bond": 6500.0,
+        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "in_custody": true,
+        "charge_score": 6.01,
+        "photo": "mugshots/lee-1033740.jpg",
+        "photo_score": 0.25,
+        "score": 0.699,
+        "reel": "reels/lee-1033740.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 7
+    },
+    {
+      "data": {
+        "id": "polk-2630824",
+        "county": "Polk",
+        "booking_number": "2630824",
+        "booked": "2026-10-09",
+        "name": "PARKER, LINDSEY LINNEA",
+        "age": 33,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "Traffick Amphetamine Methamphet. 2",
+            "statute": "893.135.1F1B",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) TRAFFICK AMPHETAMINE METHAMPHET. 28 200 GR",
+            "count": 1
+          },
+          {
+            "desc": "Keep Pub Nuisance Structure f Drug",
+            "statute": "823.10.1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) KEEP PUB NUISANCE STRUCTURE F DRUG ACTIVITY",
+            "count": 1
+          },
+          {
+            "desc": "POSS OF DRUG PARAPHERNAL SMOKING DEVICE",
+            "statute": "893.147.1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) POSS OF DRUG PARAPHERNAL   SMOKING DEVICE",
+            "count": 1
+          },
+          {
+            "desc": "Misuse 911 or E911 System Services",
+            "statute": "365.172.14A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) MISUSE 911 OR E911 SYSTEM SERVICES",
+            "count": 1
+          },
+          {
+            "desc": "Viol of Probation Community Contro",
+            "statute": "948.06",
+            "level": "Misdemeanor",
+            "degree": "",
+            "detail": "(1 cnts) VOP  DUI MISD",
+            "count": 2
+          }
+        ],
+        "bond": 107000.0,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 5.21,
+        "photo": "mugshots/polk-2630824.jpg",
+        "photo_score": 0.56,
+        "score": 0.69,
+        "reel": "reels/polk-2630824.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 8
+    },
+    {
+      "data": {
+        "id": "lee-1033749",
+        "county": "Lee",
+        "booking_number": "1033749",
+        "booked": "2026-10-09",
+        "name": "HERNANDEZ SALES, ALAN ELIU",
+        "age": 18,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "FLEE/ELUDE POLICE (FLEE ELUDE HIGH SPEED OR DISR SAFETY PERS PROP)",
+            "statute": "316.1935-3a",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "DUI-UNLAW BLD ALCH (0.15 OR HIGHER OR W PERSON UNDER 18 IN VEHICLE)",
+            "statute": "316.193-4",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "MOVING TRAFFIC VIOL (OPERATE MOTOR VEHICLE W/O VALID LIC 1ST CONV)",
+            "statute": "322.03-1",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "NONMOVING TRAFFIC VIOL (ATTACH REGISTRATION LICENSE PLATE NOT ASSIGNED)",
+            "statute": "320.261",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          }
+        ],
+        "bond": 5500.0,
+        "agency": "FLORIDA HIGHWAY PATROL",
+        "in_custody": true,
+        "charge_score": 5.27,
+        "photo": "mugshots/lee-1033749.jpg",
+        "photo_score": 0.47,
+        "score": 0.666,
+        "reel": "reels/lee-1033749.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 9
+    },
+    {
+      "data": {
+        "id": "orange-26033499",
+        "county": "Orange",
+        "booking_number": "26033499",
+        "booked": "2026-10-09",
+        "name": "WINTERS, ASHATIA AVEANNA",
+        "age": 34,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "AGGRAVATED ASSAULT (DATING VIOLENCE)",
+            "statute": "784.021(1)(A)-18",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 4.5,
+        "photo": "mugshots/orange-26033499.jpg",
+        "photo_score": 0.79,
+        "score": 0.666,
+        "reel": "reels/orange-26033499.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 10
+    }
+  ]
+}

@@ -163,14 +163,12 @@ def _mugshot(story, path):
 def caption(s):
     tags = "#FloridaMugshots #FloridaNews #Florida" + (" #FloridaMan" if s.get("flavor") else "")
     return "\n".join([
-        f"📰 {s['title']}",
+        s["title"],
         "",
         s["description"],
         "",
-        f"📍 {s['region']} · Source: {s['source']}",
-        f"🔗 {s['url']}",
-        "",
-        "Anyone charged is presumed innocent until proven guilty in court.",
+        f"{s['region']} · Source: {s['source']}",
+        s["url"],
         "",
         f"{tags} {config.REGION_TAGS.get(s['region'], '')}".strip(),
     ])

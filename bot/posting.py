@@ -1,7 +1,7 @@
 """Hourly posting: decide whether this run posts (preflight), then post the next queued booking.
 
 Posts go out as a Reel when one was rendered (reels.py), falling back to the still photo.
-The caption's "👤 LAST, FIRST" line is the name as booked; DM removal handling will match on it, so keep it.
+The caption's "LAST, FIRST" line (third line) is the name as booked; DM removal handling will match on it, so keep it.
 """
 import os
 from datetime import date, datetime
@@ -18,7 +18,7 @@ def _charge(c):
         tag += {"FIRST": "1", "SECOND": "2", "THIRD": "3"}.get(c.get("degree", ""), "")
         tag = {"CAPITAL": "Capital felony", "LIFE": "Life felony"}.get(c.get("degree", ""), tag)
     count = f" x{c['count']}" if c.get("count", 1) > 1 else ""
-    return f"▪️ {c['desc'].capitalize()}{count}" + (f" ({tag})" if tag else "")
+    return f"- {c['desc'].capitalize()}{count}" + (f" ({tag})" if tag else "")
 
 
 def caption(d):
@@ -26,23 +26,20 @@ def caption(d):
     booked = date.fromisoformat(d["booked"])
     man = {"M": " #FloridaMan", "F": " #FloridaWoman"}.get(d.get("sex", ""), "")
     lines = [
-        f"🚨 {d['county'].upper()} COUNTY ARREST",
+        f"{d['county'].upper()} COUNTY ARREST",
         "",
-        f"👤 {d['name']}" + (f" ({d['age']})" if d.get("age") else ""),
-        "⚖️ Charges:",
+        d["name"] + (f" ({d['age']})" if d.get("age") else ""),
+        "Charges:",
         *[_charge(c) for c in d["charges"][:6]],
     ]
     if len(d["charges"]) > 6:
-        lines.append(f"▪️ …and {len(d['charges']) - 6} more")
+        lines.append(f"- …and {len(d['charges']) - 6} more")
     if d.get("bond"):
-        lines.append(f"💵 Bond: ${d['bond']:,.0f}")
+        lines.append(f"Bond: ${d['bond']:,.0f}")
     if d.get("agency"):
-        lines.append(f"🚓 Arrested by: {d['agency'].title()}")
+        lines.append(f"Arrested by: {d['agency'].title()}")
     lines += [
-        f"📅 Booked: {booked.strftime('%b')} {booked.day}, {booked.year}",
-        "",
-        config.DISCLAIMER,
-        f"📩 {config.REMOVAL_NOTE}",
+        f"Booked: {booked.strftime('%b')} {booked.day}, {booked.year}",
         "",
         f"Source: {county['source']} public booking records (Fla. Stat. ch. 119).",
         "",

@@ -115,8 +115,6 @@ BORING_CHARGES = (r"VIOLATION OF PROBATION|\bVOP\b|PROBATION|FAILURE TO APPEAR|\
 BORING_PENALTY = 3
 
 # --- Posts ---
-DISCLAIMER = "An arrest is not a conviction. Charges are allegations, and everyone is presumed innocent until proven guilty in court."
-REMOVAL_NOTE = "Want this taken down? DM us. Removal is always free."
 REEL_SECONDS = 8
 
 # The Florida look (reels.py). Deliberately unlike Minneapolis (black / yellow / red, DejaVu)

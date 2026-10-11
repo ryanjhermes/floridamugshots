@@ -1,0 +1,51 @@
+name: Rebuild Reels
+
+# Queued Reels are rendered once, at the nightly scrape, and posting uses those files from Pages.
+# So a design change wouldn't show until the next scrape. This re-renders the queue and redeploys
+# Pages whenever the Reel design changes (or on demand).
+on:
+  push:
+    branches: [main]
+    paths: ['bot/reels.py', 'fonts/**', 'site/**']
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: queue-state
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+      - run: python -m bot make-reels
+      - name: Commit queue
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add posting_queue.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Rebuild Reels $(date -u '+%Y-%m-%d %H:%M')"
+          for attempt in 1 2 3; do git push && exit 0; git pull --rebase origin main; done
+          exit 1
+      - run: ./build_pages.sh
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4

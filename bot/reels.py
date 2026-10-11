@@ -2,11 +2,11 @@
 
 The Florida look, deliberately unlike Minneapolis (centered, black, yellow/red DejaVu):
 Gulf-teal gradient, sunset-coral accents, sand text, Anton + Barlow, left-aligned layout, rounded photo
-with a slow zoom-OUT, a tilted charge-level stamp on the photo, and a degree chip per charge.
+with a slow zoom-OUT and a degree chip per charge. No text on the photo.
 County, date and bond live in the caption, not on the Reel.
 
 Layers, bottom to top: background card (gradient + all text) -> zooming photo -> overlay (rounded corners,
-border, stamp). Text stays clear of Instagram's Reel UI: nothing below y=1640 or right of x=940 under y=1000.
+border). Text stays clear of Instagram's Reel UI: nothing below y=1640 or right of x=940 under y=1000.
 Reels are written to reels/ and served only from GitHub Pages (never committed).
 """
 import os
@@ -130,7 +130,7 @@ def _background(b):
 
 
 def _overlay(bg, b):
-    """Transparent layer above the photo: background in the rounded-off corners, a border, and the stamp."""
+    """Transparent layer above the photo: background in the rounded-off corners, and a border. Nothing on the photo itself."""
     over = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     mask = Image.new("L", (PW, PH), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, PW - 1, PH - 1], radius=RADIUS, fill=255)
@@ -140,17 +140,6 @@ def _overlay(bg, b):
     d = ImageDraw.Draw(over)
     d.rounded_rectangle([PX, PY, PX + PW - 1, PY + PH - 1], radius=RADIUS, outline=C["accent"], width=BORDER)
 
-    worst = min(b["charges"], key=lambda c: {"Felony": 0, "Misdemeanor": 1}.get(c.get("level", ""), 2))
-    text = (worst.get("level") or "BOOKED").upper()
-    sf = font("Anton-Regular.ttf", 60)
-    tw = int(d.textlength(text, font=sf))
-    stamp = Image.new("RGBA", (tw + 70, 110), (0, 0, 0, 0))
-    sd = ImageDraw.Draw(stamp)
-    color = chip(worst)[1]
-    sd.rounded_rectangle([4, 4, tw + 66, 106], radius=14, fill=C["bg_bottom"] + (235,), outline=color + (255,), width=7)
-    sd.text(((tw + 70) / 2, 80), text, font=sf, fill=color + (255,), anchor="ms")
-    stamp = stamp.rotate(-8, expand=True, resample=Image.BICUBIC)
-    over.alpha_composite(stamp, (PX + PW - stamp.width + 90, PY - 50))
     return over
 
 

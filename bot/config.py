@@ -67,25 +67,47 @@ DEGREE_POINTS = {
     ("Misdemeanor", ""): 0.5,
     ("", ""): 1,  # Level unknown (common in Polk): between a misdemeanor and a felony
 }
-# Regex (matched against the upper-cased charge description) -> bonus points. The highest match per
-# charge counts. This is the "would people stop scrolling for this" list; tune it from insights.
+# (category, regex, bonus points). Regex is matched against the upper-cased charge description + docket text;
+# the highest match per charge counts. Category is what the repeat limit counts (REPEAT_LIMIT).
+# This is the "would people stop scrolling for this" list; tune it from insights.
+# Florida flavor sits at the top on purpose: a gator or airboat charge should beat almost anything.
 CHARGE_KEYWORDS = [
-    (r"MURDER|HOMICIDE", 5),
-    (r"MANSLAUGHTER|KIDNAP|CARJACK|HOME ?INVASION", 4),
-    (r"ARMED ROBBERY|ROBBERY.*(FIREARM|WEAPON)|SHOOT|DISCHARG.*FIREARM|FIRE(ARM)? INTO", 3.5),
-    (r"ANIMAL|ALLIGATOR|GATOR|WILDLIFE|\bDOGS?\b|\bCATS?\b|HORSE|MANATEE", 3),
-    (r"ARSON|EXPLOSIVE|BOMB|HOAX", 3),
-    (r"AGG(RAVATED)?\.? (BATTERY|ASSAULT|STALKING)|DEADLY WEAPON", 2.5),
-    (r"(BATTERY|ASSAULT).*(LEO|OFFICER|FIREFIGHTER|EMS|DEPUTY)|(LEO|OFFICER).*(BATTERY|ASSAULT)", 2.5),
-    (r"FLEE|ELUD|HIGH SPEED|RESIST.*WITH VIOL", 2),
-    (r"ROBBERY|BURGLARY|STRONG ARM|GRAND THEFT.*(MOTOR|VEHICLE)", 1.5),
-    (r"TRAFFICK|SMUGGL|RACKETEER|ORGANIZED FRAUD|EXPLOIT", 2),
-    (r"EXPOSURE|INDECENT|NUDITY|LEWD|VOYEUR", 2),
-    (r"IMPERSONAT|FALSE (REPORT|INFO|ID)|BRIBE", 1.5),
-    (r"DUI.*(MANSLAUGHTER|SERIOUS|INJURY|DAMAGE)|BUI|BOAT", 2),
-    (r"DUI|DWI|UNDER THE INFLUENCE", 0.75),
-    (r"BATTERY|ASSAULT|STALK|THREAT", 0.75),
+    ("fl-wildlife", r"ALLIGATOR|\bGATORS?\b|CROCODILE|MANATEE|PYTHON|IGUANA|SHARK|SEA TURTLE|MARINE TURTLE|"
+                    r"PELICAN|FLAMINGO|PANTHER|\bBEARS?\b|WILDLIFE|\bFWC\b|FISH AND WILDLIFE|\bGAME\b|SNOOK|"
+                    r"REDFISH|\bHUNT", 8),
+    ("fl-water", r"AIRBOAT|\bBOAT|VESSEL|JET ?SKI|WATERCRAFT|\bBUI\b|MARINE|SWAMP|CANAL|MANGROVE", 7),
+    ("fl-life", r"GOLF CART|LAWN ?MOWER|\bMOPED|SCOOTER|\bBEACH|THEME PARK|DISNEY|UNIVERSAL|SEAWORLD|"
+                r"FIREWORK|HURRICANE|SPRING BREAK|FLORIDA MAN", 7),
+    ("fl-weird", r"NAKED|NUDITY|EXPOSURE|INDECENT|BODILY FLUID|\bSPIT|URINAT|FECES|MISSILE|"
+                 r"THROW.*(DEADLY|MISSILE|OBJECT)", 6),
+    ("sex-offense", r"LEWD|VOYEUR|SEXUAL", 2),
+    ("murder", r"MURDER|HOMICIDE", 5),
+    ("animal", r"ANIMAL|\bDOGS?\b|\bCATS?\b|HORSE|LIVESTOCK|\bCOCK ?FIGHT|\bROOSTER", 4.5),
+    ("violent-major", r"MANSLAUGHTER|KIDNAP|CARJACK|HOME ?INVASION", 4),
+    ("armed", r"ARMED ROBBERY|ROBBERY.*(FIREARM|WEAPON)|SHOOT|DISCHARG.*FIREARM|FIRE(ARM)? INTO", 3.5),
+    ("arson", r"ARSON|EXPLOSIVE|BOMB|HOAX", 3),
+    ("agg-battery", r"AGG(RAVATED)?\.? (BATTERY|ASSAULT|STALKING)|DEADLY WEAPON", 2.5),
+    ("officer", r"(BATTERY|ASSAULT).*(LEO|OFFICER|FIREFIGHTER|EMS|DEPUTY)|(LEO|OFFICER).*(BATTERY|ASSAULT)", 2.5),
+    ("flee", r"FLEE|ELUD|HIGH SPEED|RESIST.*WITH VIOL", 2),
+    ("trafficking", r"TRAFFICK|SMUGGL|RACKETEER|ORGANIZED FRAUD|EXPLOIT", 2),
+    ("dui-serious", r"DUI.*(MANSLAUGHTER|SERIOUS|INJURY|DAMAGE)", 2),
+    ("theft", r"ROBBERY|BURGLARY|STRONG ARM|GRAND THEFT.*(MOTOR|VEHICLE)", 1.5),
+    ("fraud", r"IMPERSONAT|FALSE (REPORT|INFO|ID)|BRIBE", 1.5),
+    ("dui", r"DUI|DWI|UNDER THE INFLUENCE", 0.75),
+    ("battery", r"BATTERY|ASSAULT|STALK|THREAT", 0.75),
 ]
+# Charges with a child victim never get the playful fl-* bonus (a lewd act on a minor is not "Florida flavor")
+FLAVOR_EXCLUDE = r"CHILD|MINOR|JUVENILE|UNDER (1[0-8]|EIGHTEEN|SIXTEEN)|ELDERLY|DISABLED"
+# Statute chapter prefixes -> (category, points), for charges whose description doesn't say it
+STATUTE_KEYWORDS = [
+    ("fl-wildlife", r"^379\.", 8),    # Fish and wildlife conservation
+    ("fl-water", r"^327\.", 7),       # Vessel safety (boating under the influence etc.)
+    ("animal", r"^828\.", 4.5),       # Animal cruelty
+]
+# At most this many of the day's picks share a headline-charge category; each one past it loses REPEAT_PENALTY
+# (on the 0..1 final score), so a third meth trafficking only makes it on a slow day.
+REPEAT_LIMIT = 2
+REPEAT_PENALTY = 0.3
 # Charges that make a booking boring on their own. A booking where every charge matches loses BORING_PENALTY.
 BORING_CHARGES = (r"VIOLATION OF PROBATION|\bVOP\b|PROBATION|FAILURE TO APPEAR|\bFTA\b|\bWRIT\b|\bHOLD\b|\bWARRANT\b|"
                   r"OUT OF COUNTY|CONTEMPT|COMMUNITY CONTROL|SUSPENDED|REVOKED|NO VALID|DRIVING WHILE LIC|"

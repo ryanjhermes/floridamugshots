@@ -65,6 +65,11 @@ Mon      token-refresh       extends the 60-day Instagram token and stores it ba
 - **Two-stage ranking** so we fetch only ~50 photos a night: charges first (degree + keyword list in config), then
   CLIP on the shortlist. Boring charges (VOP, FTA, suspended license...) score near zero even when their docket
   text mentions a serious charge.
+- **Florida flavor is the top priority** (Ryan, Oct 10): wildlife, boats/water, golf carts/beaches/theme parks and
+  weird-public-behavior charges outscore even murder (`fl-*` categories in `config.CHARGE_KEYWORDS`, plus statute
+  chapters 379/327). Charges with a child or other vulnerable victim never get that bonus.
+- **Domestic violence stays in** (Ryan's call), ranked like any other battery/assault.
+- **Repeat limit:** up to 2 picks a day per headline-charge category, then −0.3 each. Keep "attractive" in the CLIP prompts.
 - **Filenames are `county-booking#`, never names.** Addresses and DOBs are never stored. Under-18s and unknown ages
   are skipped.
 - **Removal is permanent** (Fla. Stat. § 901.43, $5,000/day for republishing): hashed name in removed.json, checked

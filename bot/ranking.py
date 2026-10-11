@@ -5,7 +5,8 @@ Two stages, so we only download photos we might use:
    a little for extra charges and big bonds, minus config.BORING_PENALTY when every charge is boring
    (probation violations, failure to appear, suspended license...). The top config.SHORTLIST_SIZE get photos.
 2. rank (shortlist with photos): config.TEXT_WEIGHT x charge score + config.PHOTO_WEIGHT x CLIP
-   distinctiveness, each rescaled 0..1 within the day, at most config.MAX_PER_COUNTY per county.
+   distinctiveness, each rescaled 0..1 within the day, at most config.MAX_PER_COUNTY per county, and
+   config.REPEAT_PENALTY off each pick past config.REPEAT_LIMIT that shares a headline-charge category.
 If CLIP can't run, the photo term is 0 and ranking is by charges alone.
 """
 import math
@@ -13,16 +14,38 @@ import re
 
 from . import config
 
-_KEYWORDS = [(re.compile(p), pts) for p, pts in config.CHARGE_KEYWORDS]
+_KEYWORDS = [(cat, re.compile(p), pts) for cat, p, pts in config.CHARGE_KEYWORDS]
+_STATUTES = [(cat, re.compile(p), pts) for cat, p, pts in config.STATUTE_KEYWORDS]
 _BORING = re.compile(config.BORING_CHARGES)
+_NO_FLAVOR = re.compile(config.FLAVOR_EXCLUDE)
+
+
+def _text(c):
+    return f"{c['desc']} {c.get('detail', '')}".upper()
+
+
+def _best_keyword(c):
+    """(category, points) of the charge's best keyword or statute match, or (None, 0)."""
+    text, statute = _text(c), (c.get("statute") or "").strip()
+    hits = [(cat, pts) for cat, rx, pts in _KEYWORDS if rx.search(text)]
+    hits += [(cat, pts) for cat, rx, pts in _STATUTES if rx.search(statute)]
+    if _NO_FLAVOR.search(text):
+        hits = [h for h in hits if not h[0].startswith("fl-")]
+    return max(hits, key=lambda h: h[1], default=(None, 0))
 
 
 def charge_points(c):
-    text = f"{c['desc']} {c.get('detail', '')}".upper()
-    if _BORING.search(text):
+    if _BORING.search(_text(c)):
         return 0.25  # "FTA ... FELONY BATTERY" is a missed court date, not a battery arrest
     degree = config.DEGREE_POINTS.get((c["level"], c["degree"])) or config.DEGREE_POINTS.get((c["level"], ""), 0)
-    return degree + max((pts for rx, pts in _KEYWORDS if rx.search(text)), default=0)
+    return degree + _best_keyword(c)[1]
+
+
+def category(b):
+    """What kind of arrest this is, for the repeat limit: the headline charge's keyword category,
+    else its description (so three plain cocaine possessions also count as repeats)."""
+    top = max(b["charges"], key=charge_points)
+    return _best_keyword(top)[0] or " ".join(top["desc"].upper().split()[:4])
 
 
 def charge_score(b):
@@ -65,16 +88,24 @@ def rank(bookings, n=config.QUEUE_SIZE):
         b["photo_score"] = round(photo[b["id"]], 2)
         b["score"] = round(config.TEXT_WEIGHT * text[b["id"]] + config.PHOTO_WEIGHT * photo[b["id"]], 3)
 
-    picked, per_county = [], {}
-    for b in sorted(bookings, key=lambda b: -b["score"]):
-        if per_county.get(b["county"], 0) < config.MAX_PER_COUNTY:
-            picked.append(b)
-            per_county[b["county"]] = per_county.get(b["county"], 0) + 1
-        if len(picked) == n:
+    # Greedy: each round take the best remaining booking after the repeat penalty, skipping full counties
+    picked, per_county, per_cat = [], {}, {}
+    left = list(bookings)
+    while left and len(picked) < n:
+        def adjusted(b):
+            extra = per_cat.get(category(b), 0) + 1 - config.REPEAT_LIMIT
+            return b["score"] - config.REPEAT_PENALTY * max(extra, 0)
+        left = [b for b in left if per_county.get(b["county"], 0) < config.MAX_PER_COUNTY]
+        if not left:
             break
+        b = max(left, key=adjusted)
+        left.remove(b)
+        picked.append(b)
+        per_county[b["county"]] = per_county.get(b["county"], 0) + 1
+        per_cat[category(b)] = per_cat.get(category(b), 0) + 1
 
     for i, b in enumerate(picked, 1):
         top = max(b["charges"], key=charge_points)
         print(f"🏆 #{i} {b['id']:<16} score {b['score']:.2f} (charges {b['charge_score']}, photo {b['photo_score']:.2f})"
-              f" | {top['level'] or '?'} {top['degree']} {top['desc'][:50]}")
+              f" [{category(b)}] | {top['level'] or '?'} {top['degree']} {top['desc'][:50]}")
     return picked

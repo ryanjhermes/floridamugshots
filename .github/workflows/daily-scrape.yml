@@ -1,0 +1,63 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    # 06:30 UTC = 2:30 AM EDT / 1:30 AM EST, after Orange regenerates its booking PDF (~1:07 AM local)
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    # Shared with every workflow that edits the queue, so they never run at the same time
+    concurrency:
+      group: queue-state
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main  # Latest main, not the triggering commit: the bots commit many times a day
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+          # CPU-only CLIP for photo ranking; ranking falls back to charges alone if this fails
+          pip install torch --index-url https://download.pytorch.org/whl/cpu || echo "⚠️ torch install failed"
+          pip install "transformers>=4.40,<6" || echo "⚠️ transformers install failed"
+
+      - name: Scrape, rank, queue
+        run: |
+          python -m bot scrape
+          python -m bot purge-removed
+          python -m bot purge-unqueued
+          python -m bot make-reels || echo "⚠️ Reel rendering failed, posts will use still photos"
+
+      - name: Commit queue and photos
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add posting_queue.json
+          git add -A mugshots/
+          git diff --staged --quiet && exit 0
+          git commit -m "Daily scrape $(date -u '+%Y-%m-%d')"
+          for attempt in 1 2 3; do git push && exit 0; git pull --rebase origin main; done
+          exit 1
+
+      - run: ./build_pages.sh
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4

@@ -1,0 +1,54 @@
+name: Instagram Posting
+
+on:
+  schedule:
+    # Hourly through the Eastern day in both EDT and EST. `python -m bot preflight` acts only in
+    # config.POSTING_HOURS slots; other runs exit in seconds.
+    - cron: '7 0-3,11-23 * * *'
+  workflow_dispatch:  # Posts the next queued booking now
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: queue-state
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests python-dotenv pytz
+
+      - name: Preflight
+        id: preflight
+        run: python -m bot preflight
+
+      - name: Post next
+        if: steps.preflight.outputs.mode == 'post'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          sleep $((RANDOM % 61))
+          python -m bot post-next
+
+      - name: Record the post
+        if: steps.preflight.outputs.mode == 'post'
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add posting_queue.json
+          git add -A mugshots/
+          git diff --staged --quiet && exit 0
+          git commit -m "Posted $(date -u '+%Y-%m-%d %H:%M')"
+          # The post already went out, so the record must land: retry on a moved main
+          for attempt in 1 2 3; do git push && exit 0; git pull --rebase origin main; done
+          echo "❌ Could not push; the post is NOT recorded as posted"
+          exit 1

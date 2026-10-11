@@ -1,0 +1,7 @@
+# Scrape workflow. The posting and token workflows install only requests, python-dotenv and pytz.
+# torch + transformers (CLIP photo ranking) are installed separately in daily-scrape.yml, CPU-only.
+pdfplumber==0.11.10
+pillow==11.3.0
+python-dotenv==1.1.1
+pytz==2024.2
+requests==2.32.4

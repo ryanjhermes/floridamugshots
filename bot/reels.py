@@ -1,12 +1,13 @@
 """Render 9:16 Reels for queued bookings: Pillow draws the card, ffmpeg animates the photo.
 
-The Florida look, deliberately unlike Minneapolis (centered, black, yellow/red DejaVu):
-Gulf-teal gradient, sunset-coral accents, sand text, Anton + Barlow, left-aligned layout, rounded photo
-with a slow zoom-OUT and a degree chip per charge. No text on the photo.
-County, date and bond live in the caption, not on the Reel.
+Mugshot Reels (Ryan, Oct 11): black background, everything centered, no header text. Rounded photo with a
+coral border and a slow zoom-OUT, the name in sand Anton, then up to 3 charges with a degree chip (no chip
+when the level is unknown). No text on the photo. County, date, age and bond live in the caption.
+News cards keep the teal gradient and header (render_news_card).
 
 Layers, bottom to top: background card (gradient + all text) -> zooming photo -> overlay (rounded corners,
-border). Text stays clear of Instagram's Reel UI: nothing below y=1640 or right of x=940 under y=1000.
+border). Text stays clear of Instagram's Reel UI: nothing below y=1640, and centered text is capped at
+TEXT_W so it stays left of the right-side buttons.
 Reels are written to reels/ and served only from GitHub Pages (never committed).
 """
 import os
@@ -20,7 +21,9 @@ from . import config, posting_queue
 
 W, H, FPS = 1080, 1920, 30
 MARGIN = 90
-PX, PY, PW, PH = 90, 250, 720, 900       # Photo window (mugshots are 4:5)
+PW, PH = 800, 1000                       # Photo window (mugshots are 4:5)
+PX, PY = (W - PW) // 2, 190
+TEXT_W = 800                             # Max width of centered name/charge lines
 RADIUS, BORDER = 36, 8
 C = config.COLORS
 
@@ -99,30 +102,34 @@ def _pill(d, x, y, text, fill=None, size=34):
 
 
 def _background(b):
-    img, d = _canvas(W, H)
-    _header(d, 130)
+    img = Image.new("RGB", (W, H), (0, 0, 0))
+    d = ImageDraw.Draw(img)
 
-    # Name
-    y = PY + PH + 110
+    # Name, centered under the photo
+    y = PY + PH + 105
     name = display_name(b["name"]).upper()
-    nf = _fit(d, name, "Anton-Regular.ttf", 96, W - 2 * MARGIN - 60)
-    d.text((MARGIN, y), name, font=nf, fill=C["text"], anchor="ls")
+    nf = _fit(d, name, "Anton-Regular.ttf", 96, TEXT_W)
+    d.text((W // 2, y), name, font=nf, fill=C["text"], anchor="ms")
 
-    # Charges: chip + description, one line each, in queue order (headline charge first), max 3
+    # Charges: [chip] + description, each line centered as a unit, headline charge first, max 3
     cf, chf = font("Barlow-SemiBold.ttf", 36), font("Barlow-ExtraBold.ttf", 30)
     charges = b["charges"]
-    y += 40
+    y += 38
     for c in charges[:3]:
         label, color = chip(c)
-        d.rounded_rectangle([MARGIN, y, MARGIN + 86, y + 50], radius=12, fill=color)
-        d.text((MARGIN + 43, y + 25), label, font=chf, fill=C["accent_text"], anchor="mm")
+        has_chip = label != "•"
+        chip_w = 86 + 22 if has_chip else 0
         desc = c["desc"].upper() + (f" (x{c['count']})" if c.get("count", 1) > 1 else "")
-        d.text((MARGIN + 108, y + 25), _ellipsize(d, desc, cf, 940 - MARGIN - 108), font=cf,
-               fill=C["text"], anchor="lm")
+        desc = _ellipsize(d, desc, cf, TEXT_W - chip_w)
+        x = (W - chip_w - d.textlength(desc, font=cf)) / 2
+        if has_chip:
+            d.rounded_rectangle([x, y, x + 86, y + 50], radius=12, fill=color)
+            d.text((x + 43, y + 25), label, font=chf, fill=C["accent_text"], anchor="mm")
+        d.text((x + chip_w, y + 25), desc, font=cf, fill=C["text"], anchor="lm")
         y += 66
     if len(charges) > 3:
-        d.text((MARGIN + 108, y + 14), f"+{len(charges) - 3} MORE", font=font("Barlow-Bold.ttf", 30),
-               fill=C["muted"], anchor="lm")
+        d.text((W // 2, y + 14), f"+{len(charges) - 3} MORE", font=font("Barlow-Bold.ttf", 30),
+               fill=C["muted"], anchor="mm")
     return img
 
 

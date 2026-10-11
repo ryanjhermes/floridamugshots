@@ -77,8 +77,9 @@ Mon      token-refresh       extends the 60-day Instagram token and stores it ba
   are skipped.
 - **Removal is permanent** (Fla. Stat. § 901.43, $5,000/day for republishing): hashed name in removed.json, checked
   at scrape and at post time, and purge deletes the photo and Reel.
-- **Look is deliberately not Minneapolis's:** teal/coral/sand, Anton + Barlow, left-aligned card, rounded photo,
-  zoom-out, degree chips. No text on the photo, no emojis or disclaimer/removal lines in captions, and no county/date/bond pill or booking number (Ryan, Oct 10). Colors live in `config.COLORS`.
+- **Mugshot Reel look** (Ryan, Oct 11): black background, everything centered, no header text. Rounded photo with a
+  coral border and zoom-out, name in Anton, charges in Barlow with a degree chip (none when the level is unknown).
+  No age. News cards keep the teal gradient and header. No text on the photo, no emojis or disclaimer/removal lines in captions, and no county/date/bond pill or booking number (Ryan, Oct 10). Colors live in `config.COLORS`.
 
 - **News posts use our own card, not the station's photo** (copyright: station/AP/Getty images). The story's lead
   image is shown only if CLIP says it's a booking photo. Stories are gated to Florida crime news, "shocking" is

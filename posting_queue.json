@@ -86,13 +86,14 @@
         "agency": "OTHER AGENCIES",
         "in_custody": true,
         "charge_score": 5.9,
-        "photo": "mugshots/orange-26033520.jpg",
+        "photo": null,
         "photo_score": 0.87,
         "score": 0.931,
-        "reel": "reels/orange-26033520.mp4"
+        "reel": "reels/orange-26033520.mp4",
+        "media_id": "18107222036252992"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-10T21:58:38.149259-04:00",
       "id": 2
     },
     {

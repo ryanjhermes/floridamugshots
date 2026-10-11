@@ -102,14 +102,11 @@ def _background(b):
     img, d = _canvas(W, H)
     _header(d, 130)
 
-    # Name + age
+    # Name
     y = PY + PH + 110
     name = display_name(b["name"]).upper()
-    nf = _fit(d, name, "Anton-Regular.ttf", 96, W - 2 * MARGIN - 140)
+    nf = _fit(d, name, "Anton-Regular.ttf", 96, W - 2 * MARGIN - 60)
     d.text((MARGIN, y), name, font=nf, fill=C["text"], anchor="ls")
-    if b.get("age"):
-        d.text((MARGIN + d.textlength(name + "  ", font=nf), y), f"{b['age']}", font=font("Anton-Regular.ttf", 56),
-               fill=C["muted"], anchor="ls")
 
     # Charges: chip + description, one line each, in queue order (headline charge first), max 3
     cf, chf = font("Barlow-SemiBold.ttf", 36), font("Barlow-ExtraBold.ttf", 30)

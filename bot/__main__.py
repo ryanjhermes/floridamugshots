@@ -27,6 +27,12 @@ def main():
     sub.add_parser("preflight", help="Should this hour post? Prints and outputs mode= / reason=")
     post = sub.add_parser("post-next", help="Post the next queued entry")
     post.add_argument("--dry-run", action="store_true", help="Print caption and URLs; post and change nothing")
+    news = sub.add_parser("news", help="News posts (see bot/news.py)")
+    news_sub = news.add_subparsers(dest="action", required=True)
+    news_pick = news_sub.add_parser("pick", help="Score stories, render the best, save it as pending")
+    news_pick.add_argument("--dry-run", action="store_true", help="Score and render only; state untouched")
+    news_pick.add_argument("--force", action="store_true", help="Ignore the news-hour and once-per-slot checks")
+    news_sub.add_parser("post", help="Post the pending story")
     sub.add_parser("check-queue", help="Queue status")
     sub.add_parser("purge-unqueued", help="Delete photos no upcoming post needs")
     sub.add_parser("purge-removed", help="Strip people on the removal list from the queue and mugshots/")
@@ -58,6 +64,12 @@ def main():
     elif args.command == "post-next":
         from . import posting
         sys.exit(0 if posting.post_next(args.dry_run) else 1)
+    elif args.command == "news":
+        from . import news
+        if args.action == "pick":
+            news.pick(args.dry_run, args.force)
+        else:
+            sys.exit(0 if news.post() else 1)
     elif args.command == "check-queue":
         from . import posting_queue
         posting_queue.check()

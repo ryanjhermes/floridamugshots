@@ -41,6 +41,22 @@ PLAIN_PROMPTS = [
 ]
 
 
+# Used by news.py: only a booking photo (public record) is shown from a news story, never the outlet's own photos
+MUGSHOT_PROMPTS = [
+    "a police booking mugshot",
+    "a jail booking photo of a person against a plain wall",
+    "a sheriff's office mugshot of a person in a jail uniform",
+]
+NOT_MUGSHOT_PROMPTS = [
+    "a candid snapshot of a person",
+    "a smiling family photo or selfie",
+    "a photo of a crime scene, police tape, or police cars",
+    "a photo of a building, street, or vehicle",
+    "a screenshot of a document or video",
+    "a school or yearbook portrait",
+]
+
+
 @lru_cache(maxsize=1)
 def _model():
     return CLIPModel.from_pretrained(MODEL_NAME).eval(), CLIPProcessor.from_pretrained(MODEL_NAME)

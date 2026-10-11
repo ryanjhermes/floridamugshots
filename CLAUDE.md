@@ -23,6 +23,7 @@ bot/
   reels.py          Pillow card + ffmpeg zoom. `preview-reel` renders a sample for design work
   posting.py        Captions, preflight (slot logic), post_next with Reel -> photo fallback
   instagram.py      graph.instagram.com container -> poll -> publish
+  news.py           News posts: statewide TV RSS -> zero-shot scoring -> our own card + Reel (pick, then post)
   removals.py       removed.json (hashed names) and purge
   auth.py           Token setup/check/refresh
 site/               Static Pages content (about, removal policy, privacy policy for the Meta app)
@@ -39,6 +40,7 @@ python -m bot scrape [--day YYYY-MM-DD]   # Rebuild posting_queue.json + mugshot
 python -m bot make-reels                  # Reels for the unposted queue (needs ffmpeg)
 python -m bot preview-reel PHOTO --out x.mp4   # Sample Reel + still, for design changes
 python -m bot preflight | post-next [--dry-run] | check-queue
+python -m bot news pick --dry-run [--force]   # Score today's stories and render the winner; no state change
 python -m bot purge-removed | purge-unqueued
 python -m bot auth check | refresh
 ```
@@ -51,6 +53,7 @@ don't leave scraped photos or queues lying around outside the repo's own `mugsho
 ```
 2:30 AM  daily-scrape        yesterday's bookings → rank → queue 10 → Reels → commit → Pages
 7,9,11,12,1,3,5,7,8,9         instagram-posting posts one per slot (Reel via Pages URL, photo fallback)
+2, 6 PM  news-posting        best outlandish Florida crime story (if any clears the bar) → card + Reel → Pages → post
 Mon      token-refresh       extends the 60-day Instagram token and stores it back as a repo secret
 ```
 
@@ -76,6 +79,12 @@ Mon      token-refresh       extends the 60-day Instagram token and stores it ba
   at scrape and at post time, and purge deletes the photo and Reel.
 - **Look is deliberately not Minneapolis's:** teal/coral/sand, Anton + Barlow, left-aligned card, rounded photo,
   zoom-out, level stamp, degree chips. Colors live in `config.COLORS`.
+
+- **News posts use our own card, not the station's photo** (copyright: station/AP/Getty images). The story's lead
+  image is shown only if CLIP says it's a booking photo. Stories are gated to Florida crime news, "shocking" is
+  down-weighted (alone it rates every hit-and-run 0.8) and deaths are penalized; Florida flavor adds a bonus.
+  Many days nothing clears `NEWS_MIN_SCORE`, which is intended. The NLI model is called directly (no
+  transformers pipeline), so it works on transformers 5, unlike Minneapolis.
 
 ## Rules the code depends on
 

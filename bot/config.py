@@ -132,6 +132,31 @@ COLORS = {
     "other": (143, 196, 196),
 }
 
+# --- News posts (news.py): the most outlandish Florida crime story of the afternoon/evening ---
+NEWS_STATE_FILE = "news_state.json"   # Posted story URLs + the story waiting to post (committed)
+NEWS_DIR = "news"                     # Rendered news cards/Reels, Pages only (gitignored)
+NEWS_HOURS = [14, 18]                 # Eastern; one story each, only if one clears NEWS_MIN_SCORE. No mugshot slot at these hours
+NEWS_MIN_SCORE = 0.6                  # 0..1+ (best "interesting" label + Florida-flavor bonus)
+NEWS_MIN_CRIME = 0.5                  # Zero-shot "is this about a crime or arrest?" gate
+NEWS_TRAGEDY_PENALTY = 0.5            # x "people were killed" probability: deaths aren't the outlandish we want
+NEWS_FLAVOR_BONUS = 0.35              # Added when the story reads as Florida-flavored (labels or fl-* keywords)
+NEWS_MUGSHOT_MIN = 0.8                # CLIP check before we show a story's lead image (booking photos only)
+# (source, region, RSS URL). Statewide on purpose: this is how South Florida and Tampa get covered
+NEWS_FEEDS = [
+    ("WSVN 7News", "Miami", "https://www.wsvn.com/news/local/feed/"),
+    ("NBC 6 South Florida", "Miami", "https://www.nbcmiami.com/news/local/feed/"),
+    ("Local 10", "Miami", "https://www.local10.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml"),
+    ("FOX 13", "Tampa Bay", "https://www.fox13news.com/rss/category/news"),
+    ("WFLA 8", "Tampa Bay", "https://www.wfla.com/news/feed/"),
+    ("News 6", "Orlando", "https://www.clickorlando.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml"),
+    ("FOX 35", "Orlando", "https://www.fox35orlando.com/rss/category/news"),
+    ("News4JAX", "Jacksonville", "https://www.news4jax.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml"),
+]
+REGION_TAGS = {
+    "Miami": "#Miami #SouthFlorida #Broward", "Tampa Bay": "#Tampa #TampaBay #StPete",
+    "Orlando": "#Orlando #CentralFlorida", "Jacksonville": "#Jacksonville #Jax #NorthFlorida",
+}
+
 # Per-county caption details: source credit and hashtags
 COUNTIES = {
     "Lee": {"source": "Lee County Sheriff's Office", "tags": "#LeeCounty #FortMyers #CapeCoral #SWFL"},

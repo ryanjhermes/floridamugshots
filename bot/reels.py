@@ -66,34 +66,49 @@ def _ellipsize(draw, text, f, max_w):
     return text.rstrip() + "…"
 
 
-def _background(b):
-    img = Image.new("RGB", (W, H))
+def _canvas(w, h):
+    """Gulf-teal gradient with the sunset band across the top edge."""
+    img = Image.new("RGB", (w, h))
     top, bottom = C["bg_top"], C["bg_bottom"]
     d = ImageDraw.Draw(img)
-    for y in range(H):
-        t = y / (H - 1)
-        d.line([(0, y), (W, y)], fill=tuple(round(top[i] + (bottom[i] - top[i]) * t) for i in range(3)))
-    # Sunset band across the top edge
-    for x in range(W):
-        t = x / (W - 1)
+    for y in range(h):
+        t = y / (h - 1)
+        d.line([(0, y), (w, y)], fill=tuple(round(top[i] + (bottom[i] - top[i]) * t) for i in range(3)))
+    for x in range(w):
+        t = x / (w - 1)
         d.line([(x, 0), (x, 14)], fill=tuple(round(C["accent"][i] + (C["misdemeanor"][i] - C["accent"][i]) * t)
                                              for i in range(3)))
+    return img, d
 
-    # Header: FLORIDA (sand) MUGSHOTS (coral)
-    hf = font("Anton-Regular.ttf", 92)
-    d.text((MARGIN, 130), "FLORIDA", font=hf, fill=C["text"], anchor="ls")
-    d.text((MARGIN + d.textlength("FLORIDA ", font=hf), 130), "MUGSHOTS", font=hf, fill=C["accent"], anchor="ls")
+
+def _header(d, y, size=92):
+    """FLORIDA (sand) MUGSHOTS (coral), baseline at y. Returns the x where it ends."""
+    hf = font("Anton-Regular.ttf", size)
+    d.text((MARGIN, y), "FLORIDA", font=hf, fill=C["text"], anchor="ls")
+    x = MARGIN + d.textlength("FLORIDA ", font=hf)
+    d.text((x, y), "MUGSHOTS", font=hf, fill=C["accent"], anchor="ls")
+    return x + d.textlength("MUGSHOTS", font=hf)
+
+
+def _pill(d, x, y, text, fill=None, size=34):
+    """Rounded label with its top-left at (x, y). Returns the x where it ends."""
+    pf = font("Barlow-ExtraBold.ttf", size)
+    tw = d.textlength(text, font=pf)
+    d.rounded_rectangle([x, y, x + tw + 56, y + 64], radius=32, fill=fill or C["accent"])
+    d.text((x + 28, y + 32), text, font=pf, fill=C["accent_text"], anchor="lm")
+    return x + tw + 56
+
+
+def _background(b):
+    img, d = _canvas(W, H)
+    _header(d, 130)
 
     # Pill: county, booking date, bond
     booked = date.fromisoformat(b["booked"])
     pill = [f"{b['county'].upper()} COUNTY", f"{MONTHS[booked.month - 1]} {booked.day}"]
     if b.get("bond"):
         pill.append(f"BOND ${b['bond']:,.0f}")
-    pill_text = "  •  ".join(pill)
-    pf = font("Barlow-ExtraBold.ttf", 34)
-    tw = d.textlength(pill_text, font=pf)
-    d.rounded_rectangle([MARGIN, 190, MARGIN + tw + 56, 254], radius=32, fill=C["accent"])
-    d.text((MARGIN + 28, 222), pill_text, font=pf, fill=C["accent_text"], anchor="lm")
+    _pill(d, MARGIN, 190, "  •  ".join(pill))
 
     # Booking number, running down the empty column right of the photo
     label = f"BOOKING #{b['booking_number']}" if b.get("booking_number") else ""
@@ -204,6 +219,90 @@ def build_queue_reels():
     for fn in os.listdir(config.REELS_DIR):
         if fn not in current:
             os.remove(os.path.join(config.REELS_DIR, fn))
+
+
+def _wrap(d, text, f, max_w):
+    lines, line = [], ""
+    for word in text.split():
+        trial = f"{line} {word}".strip()
+        if d.textlength(trial, font=f) <= max_w or not line:
+            line = trial
+        else:
+            lines.append(line)
+            line = word
+    return lines + ([line] if line else [])
+
+
+NEWS_W, NEWS_H = 1080, 1350   # 4:5 feed card; the Reel puts it on a 9:16 canvas
+
+
+def render_news_card(s, photo, out_path):
+    """News card JPEG: header, NEWS + region/source pills, optional booking photo, headline, summary, credit."""
+    img, d = _canvas(NEWS_W, NEWS_H)
+    _header(d, 120, 80)
+    x = _pill(d, MARGIN, 160, "NEWS")
+    _pill(d, x + 16, 160, f"{s['region'].upper()}  •  {s['source'].upper()}", fill=C["muted"])
+
+    y, max_w = 270, NEWS_W - 2 * MARGIN
+    if photo:
+        pw, ph = 400, 500
+        p = Image.open(photo).convert("RGB")
+        scale = max(pw / p.width, ph / p.height)
+        p = p.resize((round(p.width * scale), round(p.height * scale)))
+        p = p.crop(((p.width - pw) // 2, (p.height - ph) // 2, (p.width - pw) // 2 + pw, (p.height - ph) // 2 + ph))
+        mask = Image.new("L", (pw, ph), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw - 1, ph - 1], radius=28, fill=255)
+        img.paste(p, (MARGIN, y), mask)
+        d.rounded_rectangle([MARGIN, y, MARGIN + pw - 1, y + ph - 1], radius=28, outline=C["accent"], width=6)
+        y += ph + 40
+
+    # Headline: largest Anton size that fits the room left above the summary
+    room = NEWS_H - y - 330
+    title = s["title"].upper()
+    for size in range(112, 55, -6):
+        hf = font("Anton-Regular.ttf", size)
+        lines = _wrap(d, title, hf, max_w)
+        if len(lines) * size * 1.08 <= room:
+            break
+    for line in lines:
+        y += round(size * 1.08)
+        d.text((MARGIN, y), line, font=hf, fill=C["text"], anchor="ls")
+
+    # Summary, up to 4 lines
+    sf = font("Barlow-SemiBold.ttf", 36)
+    summary = _wrap(d, s["description"], sf, max_w)
+    if len(summary) > 4:
+        summary = summary[:4]
+        summary[-1] = _ellipsize(d, summary[-1] + " …", sf, max_w)
+    y += 40
+    for line in summary:
+        y += 46
+        d.text((MARGIN, y), line, font=sf, fill=C["muted"], anchor="ls")
+
+    d.line([(MARGIN, NEWS_H - 90), (MARGIN + 120, NEWS_H - 90)], fill=C["accent"], width=6)
+    d.text((MARGIN, NEWS_H - 50), f"SOURCE: {s['source'].upper()}  •  FULL STORY IN CAPTION",
+           font=font("Barlow-Bold.ttf", 28), fill=C["text"], anchor="ls")
+    img.save(out_path, "JPEG", quality=92)
+    return out_path
+
+
+def render_news_reel(card, out_path, seconds=config.REEL_SECONDS):
+    """9:16 Reel: the card centered on the gradient canvas, slowly zooming in."""
+    frames = seconds * FPS
+    with tempfile.TemporaryDirectory() as tmp:
+        frame, _ = _canvas(W, H)
+        frame.paste(Image.open(card), (0, (H - NEWS_H) // 2 - 60))
+        frame.resize((W * 2, H * 2)).save(f"{tmp}/frame.png")
+        subprocess.run([
+            "ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/frame.png",
+            "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+            "-filter_complex", f"[0:v]zoompan=z='1+0.05*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                               f":d={frames}:s={W}x{H}:fps={FPS},format=yuv420p[v]",
+            "-map", "[v]", "-map", "1:a", "-t", str(seconds), "-r", str(FPS),
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+            "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", out_path,
+        ], check=True)
+    return out_path
 
 
 SAMPLE = {

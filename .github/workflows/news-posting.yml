@@ -1,0 +1,97 @@
+name: News Post
+
+on:
+  schedule:
+    # config.NEWS_HOURS = 2 PM and 6 PM Eastern: 18/22 UTC in EDT, 19/23 UTC in EST.
+    # `news pick` acts only inside a news hour and once per slot, so the off-season runs exit early.
+    - cron: '20 18,19,22,23 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Score and render only; post and change nothing'
+        type: boolean
+        default: true
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    # Deploys Pages and re-renders queue Reels, so it shares the queue lock with scrape and posting
+    concurrency:
+      group: queue-state
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install -r requirements.txt
+          # Nothing posts if the models can't load
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "transformers>=4.40,<6" sentencepiece protobuf
+
+      - name: Pick a story
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.dry_run }}" = "true" ]; then python -m bot news pick --dry-run; else python -m bot news pick --force; fi
+          else
+            python -m bot news pick
+          fi
+
+      # Pages is replaced wholesale, so the queue's Reels are rendered again alongside the news card
+      - name: Build Pages
+        if: steps.pick.outputs.ready == '1'
+        run: |
+          python -m bot make-reels || echo "⚠️ Reel rendering failed, mugshot posts will use still photos"
+          ./build_pages.sh
+      - if: steps.pick.outputs.ready == '1'
+        uses: actions/configure-pages@v5
+      - if: steps.pick.outputs.ready == '1'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - if: steps.pick.outputs.ready == '1'
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for the Reel to be live
+        if: steps.pick.outputs.ready == '1'
+        run: |
+          URL=$(python -c "import json, os; from bot import config; s = json.load(open(config.NEWS_STATE_FILE))['pending']; print(f\"{config.PAGES_URL}/{config.NEWS_DIR}/{os.path.basename(s['reel'])}\")")
+          for i in $(seq 1 30); do
+            [ "$(curl -s -o /dev/null -w '%{http_code}' "$URL")" = "200" ] && echo "✅ $URL" && exit 0
+            sleep 10
+          done
+          echo "⚠️ Still not live after 5 min; trying anyway"
+
+      - name: Post
+        if: steps.pick.outputs.ready == '1'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python -m bot news post
+
+      - name: Commit news state
+        if: always() && steps.pick.outputs.ready == '1'
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add news_state.json posting_queue.json
+          git diff --staged --quiet && exit 0
+          git commit -m "News post $(date -u '+%Y-%m-%d %H:%M')"
+          for attempt in 1 2 3; do git push && exit 0; git pull --rebase origin main; done
+          echo "❌ Could not push news state; this story may post again"
+          exit 1

@@ -348,13 +348,14 @@
         "agency": "ORANGE COUNTY CLERK OF COURT",
         "in_custody": true,
         "charge_score": 5.2,
-        "photo": "mugshots/orange-26033863.jpg",
+        "photo": null,
         "photo_score": 0.55,
         "score": 0.708,
-        "reel": "reels/orange-26033863.mp4"
+        "reel": "reels/orange-26033863.mp4",
+        "media_id": "18079280219384729"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-14T19:53:31.994320-04:00",
       "id": 5
     },
     {

@@ -280,13 +280,14 @@
         "agency": "2025CF013192AO",
         "in_custody": true,
         "charge_score": 7.5,
-        "photo": "mugshots/orange-26034050.jpg",
+        "photo": null,
         "photo_score": 0.25,
         "score": 0.649,
-        "reel": "reels/orange-26034050.mp4"
+        "reel": "reels/orange-26034050.mp4",
+        "media_id": "17994831881841368"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-15T11:35:40.381182-04:00",
       "id": 4
     },
     {

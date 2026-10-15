@@ -379,13 +379,14 @@
         "agency": "ORLANDO PD",
         "in_custody": true,
         "charge_score": 8.0,
-        "photo": "mugshots/orange-26034047.jpg",
+        "photo": null,
         "photo_score": 0.0,
         "score": 0.6,
-        "reel": "reels/orange-26034047.mp4"
+        "reel": "reels/orange-26034047.mp4",
+        "media_id": "18341916025287235"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-15T19:01:15.348987-04:00",
       "id": 6
     },
     {

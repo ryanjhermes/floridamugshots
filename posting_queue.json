@@ -347,13 +347,14 @@
         "agency": "WINTER PARK PD",
         "in_custody": true,
         "charge_score": 7.7,
-        "photo": "mugshots/orange-26034056.jpg",
+        "photo": null,
         "photo_score": 0.19,
         "score": 0.645,
-        "reel": "reels/orange-26034056.mp4"
+        "reel": "reels/orange-26034056.mp4",
+        "media_id": "18152885179541578"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-15T15:51:46.636553-04:00",
       "id": 5
     },
     {

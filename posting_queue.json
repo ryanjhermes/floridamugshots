@@ -318,13 +318,14 @@
         "agency": "Winter Haven Police Department",
         "in_custody": true,
         "charge_score": 7.0,
-        "photo": "mugshots/polk-2631449.jpg",
+        "photo": null,
         "photo_score": 0.13,
         "score": 0.569,
-        "reel": "reels/polk-2631449.mp4"
+        "reel": "reels/polk-2631449.mp4",
+        "media_id": "17888629059474721"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-16T18:47:26.079441-04:00",
       "id": 7
     },
     {

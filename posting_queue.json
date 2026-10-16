@@ -1,263 +1,7 @@
 {
-  "created_at": "2026-10-15T07:48:58.089630-04:00",
-  "day": "2026-10-14",
+  "created_at": "2026-10-16T07:43:17.143655-04:00",
+  "day": "2026-10-15",
   "entries": [
-    {
-      "data": {
-        "id": "orange-26033940",
-        "county": "Orange",
-        "booking_number": "26033940",
-        "booked": "2026-10-13",
-        "name": "ROBINSON, TATIANA MONIQUE",
-        "age": 19,
-        "sex": "F",
-        "charges": [
-          {
-            "desc": "AGGRAVATED ASSAULT (DATING VIOLENCE)",
-            "statute": "784.021(1)(A)-18",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "BURGLARY OF DWELLING W/ASSAULT OR BATTERY",
-            "statute": "810.02(1)(B)(2)-27",
-            "level": "Felony",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "BATTERY (DATING VIOLENCE)",
-            "statute": "784.03-15",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "CRIMINAL MISCHIEF (>$200, <$1000)",
-            "statute": "806.13(1)(B)(2)",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORANGE COUNTY SHERIFF OFFICE",
-        "in_custody": true,
-        "charge_score": 5.4,
-        "photo": null,
-        "photo_score": 0.89,
-        "score": 0.876,
-        "media_id": "17909738529575629"
-      },
-      "posted": true,
-      "posted_at": "2026-10-14T11:49:35.169332-04:00",
-      "id": 1
-    },
-    {
-      "data": {
-        "id": "lee-1033943",
-        "county": "Lee",
-        "booking_number": "1033943",
-        "booked": "2026-10-13",
-        "name": "ROLLINS, JAMESHA EDWINA",
-        "age": 30,
-        "sex": "F",
-        "charges": [
-          {
-            "desc": "CRUELTY TO ANIMALS",
-            "statute": "828.12-2",
-            "level": "",
-            "degree": "",
-            "detail": "",
-            "count": 2
-          },
-          {
-            "desc": "CONFINEMENT/ABANDONMENT OF ANIMALS",
-            "statute": "828.13-3",
-            "level": "",
-            "degree": "",
-            "detail": "",
-            "count": 2
-          }
-        ],
-        "bond": null,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
-        "charge_score": 5.8,
-        "photo": null,
-        "photo_score": 0.35,
-        "score": 0.726,
-        "media_id": "18151454122579698"
-      },
-      "posted": true,
-      "posted_at": "2026-10-14T16:12:01.590883-04:00",
-      "id": 2
-    },
-    {
-      "data": {
-        "id": "orange-26033863",
-        "county": "Orange",
-        "booking_number": "26033863",
-        "booked": "2026-10-13",
-        "name": "VELEZ, BRANDON ANGEL",
-        "age": 29,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "FLEEING/ATT. TO ELUDE POLICE OFFICER >7/04",
-            "statute": "316.1935(1)-3",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "FLEEING/ATT. TO ELUDE POLICE OFFICER >7/04",
-            "statute": "316.1935(1)-3",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF FIREARM BY CONVICTED FELON",
-            "statute": "790.23-9",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF FIREARM BY CONVICTED FELON",
-            "statute": "790.23-9",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSS. OF COCAINE W/INTENT TO SELL/DELIVER",
-            "statute": "893.13(1)(A)-74",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSS. OF COCAINE W/INTENT TO SELL/DELIVER",
-            "statute": "893.13(1)(A)-74",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF KETAMINE",
-            "statute": "893.13(6)(A)-130",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF KETAMINE",
-            "statute": "893.13(6)(A)-130",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF METHAMPHETAMINE",
-            "statute": "893.13(6)(A)-14",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF COCAINE",
-            "statute": "893.13(6)(A)-6",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF OXYCODONE (PERCOCET)",
-            "statute": "893.13(6)(A)-138",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF COCAINE",
-            "statute": "893.13(6)(A)-6",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF OXYCODONE (PERCOCET)",
-            "statute": "893.13(6)(A)-138",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF METHAMPHETAMINE",
-            "statute": "893.13(6)(A)-14",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
-            "statute": "843.02",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
-            "statute": "843.02",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
-            "statute": "843.02",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF DRUG PARAPHERNALIA",
-            "statute": "893.147(1)",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF DRUG PARAPHERNALIA",
-            "statute": "893.147(1)",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
-            "statute": "843.02",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORANGE COUNTY CLERK OF COURT",
-        "in_custody": true,
-        "charge_score": 5.2,
-        "photo": null,
-        "photo_score": 0.55,
-        "score": 0.708,
-        "media_id": "18079280219384729"
-      },
-      "posted": true,
-      "posted_at": "2026-10-14T19:53:31.994320-04:00",
-      "id": 3
-    },
     {
       "data": {
         "id": "orange-26034050",
@@ -283,12 +27,11 @@
         "photo": null,
         "photo_score": 0.25,
         "score": 0.649,
-        "reel": "reels/orange-26034050.mp4",
         "media_id": "17994831881841368"
       },
       "posted": true,
       "posted_at": "2026-10-15T11:35:40.381182-04:00",
-      "id": 4
+      "id": 1
     },
     {
       "data": {
@@ -350,12 +93,11 @@
         "photo": null,
         "photo_score": 0.19,
         "score": 0.645,
-        "reel": "reels/orange-26034056.mp4",
         "media_id": "18152885179541578"
       },
       "posted": true,
       "posted_at": "2026-10-15T15:51:46.636553-04:00",
-      "id": 5
+      "id": 2
     },
     {
       "data": {
@@ -382,12 +124,11 @@
         "photo": null,
         "photo_score": 0.0,
         "score": 0.6,
-        "reel": "reels/orange-26034047.mp4",
         "media_id": "18341916025287235"
       },
       "posted": true,
       "posted_at": "2026-10-15T19:01:15.348987-04:00",
-      "id": 6
+      "id": 3
     },
     {
       "data": {
@@ -442,46 +183,202 @@
         "photo": null,
         "photo_score": 0.39,
         "score": 0.521,
-        "reel": "reels/orange-26033994.mp4",
         "media_id": "18110808929581774"
       },
       "posted": true,
       "posted_at": "2026-10-15T21:14:15.231040-04:00",
-      "id": 7
+      "id": 4
     },
     {
       "data": {
-        "id": "orange-26033985",
+        "id": "orange-26034147",
         "county": "Orange",
-        "booking_number": "26033985",
-        "booked": "2026-10-14",
-        "name": "WALLS, NEWELL ELIZABETH",
-        "age": 41,
-        "sex": "F",
+        "booking_number": "26034147",
+        "booked": "2026-10-15",
+        "name": "DOR, STEEVENSON ROBERT",
+        "age": 36,
+        "sex": "M",
         "charges": [
           {
-            "desc": "ARSON OF DWELLING",
-            "statute": "806.01(1)(A)",
+            "desc": "URINATING OR DEFECATING IN PUBLIC",
+            "statute": "CITY43.6",
+            "level": "Misdemeanor",
+            "degree": "SECOND",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORLANDO PD",
+        "in_custody": true,
+        "charge_score": 6.5,
+        "photo": "mugshots/orange-26034147.jpg",
+        "photo_score": 0.81,
+        "score": 0.782,
+        "reel": "reels/orange-26034147.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 5
+    },
+    {
+      "data": {
+        "id": "orange-26034159",
+        "county": "Orange",
+        "booking_number": "26034159",
+        "booked": "2026-10-15",
+        "name": "HUGHES, HUNTER LAMONT",
+        "age": 46,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "LEWD OR LASCIVIOUS MOLESTATION (VT<12 YOA)",
+            "statute": "800.04(5)(B)-3",
+            "level": "Felony",
+            "degree": "LIFE",
+            "detail": ""
+          },
+          {
+            "desc": "LEWD OR LASCIVIOUS MOL. (JLA) (VT<12 YOA)",
+            "statute": "800.04(5)(B)-4",
             "level": "Felony",
             "degree": "FIRST",
             "detail": ""
           },
           {
-            "desc": "TRESPASS IN OCCUPIED STRUCTURE/CONVEYANCE",
-            "statute": "810.08-19",
+            "desc": "LEWD OR LASCIVIOUS MOL. (JLA) (VT<12 YOA)",
+            "statute": "800.04(5)(B)-4",
+            "level": "Felony",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "ATTEMPTED SEXUAL BATTERY (CHILD UNDER 12)",
+            "statute": "794.011(2)-3",
+            "level": "Felony",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "SEXUAL BATTERY ON A CHILD UNDER 12",
+            "statute": "794.011(2)",
+            "level": "Felony",
+            "degree": "",
+            "detail": ""
+          },
+          {
+            "desc": "SEXUAL BATTERY ON A CHILD UNDER 12",
+            "statute": "794.011(2)",
+            "level": "Felony",
+            "degree": "",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY OF A CHILD BY THROWING FLUIDS",
+            "statute": "784.085(1)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "2024CF015161AO",
+        "in_custody": true,
+        "charge_score": 7.7,
+        "photo": "mugshots/orange-26034159.jpg",
+        "photo_score": 0.25,
+        "score": 0.701,
+        "reel": "reels/orange-26034159.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 6
+    },
+    {
+      "data": {
+        "id": "polk-2631449",
+        "county": "Polk",
+        "booking_number": "2631449",
+        "booked": "2026-10-15",
+        "name": "HARTZOG, ROYCE",
+        "age": 49,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Exposure of Sexual Organs 1st Offe",
+            "statute": "800.03.1A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) EXPOSURE OF SEXUAL ORGANS 1ST OFF",
+            "count": 1
+          }
+        ],
+        "bond": null,
+        "agency": "Winter Haven Police Department",
+        "in_custody": true,
+        "charge_score": 7.0,
+        "photo": "mugshots/polk-2631449.jpg",
+        "photo_score": 0.13,
+        "score": 0.569,
+        "reel": "reels/polk-2631449.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 7
+    },
+    {
+      "data": {
+        "id": "orange-26034181",
+        "county": "Orange",
+        "booking_number": "26034181",
+        "booked": "2026-10-15",
+        "name": "LINARESROMAN, DANY DANIEL",
+        "age": 33,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "AGGRAVATED BATTERY (GREAT BODILY HARM)",
+            "statute": "784.045(1)(A)(1)",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "AGGRAVATED BATTERY WITH A DEADLY WEAPON",
+            "statute": "784.045(1)(A)(2)",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "AGGRAVATED ASSAULT WITH A DEADLY WEAPON",
+            "statute": "784.021(1)(A)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "FALSE IMPRISONMENT",
+            "statute": "787.02(2)-11",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY (DOMESTIC VIOLENCE)",
+            "statute": "784.03-10",
             "level": "Misdemeanor",
             "degree": "FIRST",
             "detail": ""
           }
         ],
         "bond": null,
-        "agency": "BELLE ISLE POLICE DEPARTMENT",
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
         "in_custody": true,
-        "charge_score": 6.3,
-        "photo": "mugshots/orange-26033985.jpg",
-        "photo_score": 0.18,
-        "score": 0.497,
-        "reel": "reels/orange-26033985.mp4"
+        "charge_score": 6.2,
+        "photo": "mugshots/orange-26034181.jpg",
+        "photo_score": 0.32,
+        "score": 0.55,
+        "reel": "reels/orange-26034181.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -489,17 +386,183 @@
     },
     {
       "data": {
-        "id": "lee-1034016",
+        "id": "orange-26034131",
+        "county": "Orange",
+        "booking_number": "26034131",
+        "booked": "2026-10-15",
+        "name": "STALLWORTH, LATORIA DENISE",
+        "age": 35,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "AGGRAVATED BATTERY (ALTERNATIVE)/DOM. VIO.",
+            "statute": "784.045(1)(A)(1)-17",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "AGGRAVATED BATTERY (ALTERNATIVE)/DOM. VIO.",
+            "statute": "784.045(1)(A)(1)-17",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "OBSTRUCTING JUSTICE-TAMPER WITNESS WITHHOLD TESTIM/INFO MISD PROC",
+            "statute": "914.22(1)(A)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "OBSTRUCTING JUSTICE-TAMPER WITNESS WITHHOLD TESTIM/INFO MISD PROC",
+            "statute": "914.22(1)(A)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY (DOMESTIC VIOLENCE)",
+            "statute": "784.03(1)(A)(1)",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY (DOMESTIC VIOLENCE)",
+            "statute": "784.03(1)(A)(1)",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "VIOLATION OF PROBATION",
+            "statute": "948.06-2",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "VIOLATION OF PROBATION",
+            "statute": "948.06-2",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 6.2,
+        "photo": "mugshots/orange-26034131.jpg",
+        "photo_score": 0.3,
+        "score": 0.544,
+        "reel": "reels/orange-26034131.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 9
+    },
+    {
+      "data": {
+        "id": "lee-1034053",
         "county": "Lee",
-        "booking_number": "1034016",
-        "booked": "2026-10-14",
-        "name": "DAHL, BRET AUSTIN",
-        "age": 31,
+        "booking_number": "1034053",
+        "booked": "2026-10-15",
+        "name": "WILSON, EBAN HAKIM",
+        "age": 42,
         "sex": "M",
         "charges": [
           {
-            "desc": "AGGRAV STALKING (FOLLOW HARASS CYBERSTALK CRED THREAT TO PERSON)",
-            "statute": "784.048-3",
+            "desc": "RESIST OFFICER - RESIST OFFICER WITH VIOLENCE",
+            "statute": "843.01-1",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "PUBLIC ORDER CRIMES - MISUSE OF 911 SERVICES",
+            "statute": "365.172-14a",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "LOITERING - LOITER/PROWL IN UNSUAL PLACE OR MANNER",
+            "statute": "856.021",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          }
+        ],
+        "bond": 3500.0,
+        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "in_custody": true,
+        "charge_score": 4.87,
+        "photo": "mugshots/lee-1034053.jpg",
+        "photo_score": 0.67,
+        "score": 0.536,
+        "reel": "reels/lee-1034053.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 10
+    },
+    {
+      "data": {
+        "id": "orange-26034139",
+        "county": "Orange",
+        "booking_number": "26034139",
+        "booked": "2026-10-15",
+        "name": "CEPEDAFLORES, MIRAMON JR",
+        "age": 22,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "BURGLARY OF CONVEYANCE W/ASSAULT/BATTERY",
+            "statute": "810.02(2)(A)-4",
+            "level": "Felony",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY (DOMESTIC VIOLENCE)",
+            "statute": "784.03(1)(A)(1)",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 4.8,
+        "photo": "mugshots/orange-26034139.jpg",
+        "photo_score": 0.61,
+        "score": 0.502,
+        "reel": "reels/orange-26034139.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 11
+    },
+    {
+      "data": {
+        "id": "lee-1034075",
+        "county": "Lee",
+        "booking_number": "1034075",
+        "booked": "2026-10-15",
+        "name": "TRESENRITER, KEVIN SCOTT",
+        "age": 57,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "BATTERY (COMMIT DOMESTIC BATTERY BY STRANGULATION)",
+            "statute": "784.041-2a",
             "level": "Felony",
             "degree": "",
             "detail": "",
@@ -510,138 +573,10 @@
         "agency": "CAPE CORAL PD",
         "in_custody": true,
         "charge_score": 2.75,
-        "photo": "mugshots/lee-1034016.jpg",
+        "photo": "mugshots/lee-1034075.jpg",
         "photo_score": 1.0,
-        "score": 0.462,
-        "reel": "reels/lee-1034016.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 9
-    },
-    {
-      "data": {
-        "id": "lee-1034023",
-        "county": "Lee",
-        "booking_number": "1034023",
-        "booked": "2026-10-14",
-        "name": "GALLARDO, JORGE LOUIS",
-        "age": 56,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "BURGL (BURGLARY OF OCCUPIED DWELLING UNARMED)",
-            "statute": "810.02-3a",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "FRAUD-ILLEG USE CREDIT CARDS (UNAUTH USE CREDIT CARD TO OBTAIN GOODS LT $300)",
-            "statute": "817.481-3b",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "FRAUD-IMPERSON (USE POSS ID OF ANOTHER PERSON W/O CONSENT)",
-            "statute": "817.568-2a",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "FAILURE TO APPEAR (FAILURE TO APPEAR FOR FELONY OFFENSE)",
-            "statute": "843.15-1a",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          }
-        ],
-        "bond": null,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
-        "charge_score": 4.4,
-        "photo": "mugshots/lee-1034023.jpg",
-        "photo_score": 0.31,
-        "score": 0.355,
-        "reel": "reels/lee-1034023.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 10
-    },
-    {
-      "data": {
-        "id": "lee-1034013",
-        "county": "Lee",
-        "booking_number": "1034013",
-        "booked": "2026-10-14",
-        "name": "SCHRENKEL, ALYSSA ANNE",
-        "age": 28,
-        "sex": "F",
-        "charges": [
-          {
-            "desc": "COCAINE-TRAFFIC (TRAFFICKING IN COCAINE 28 GRAMS TO 150 KG)",
-            "statute": "893.135-1b1",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          }
-        ],
-        "bond": null,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
-        "charge_score": 4.0,
-        "photo": "mugshots/lee-1034013.jpg",
-        "photo_score": 0.35,
-        "score": 0.33,
-        "reel": "reels/lee-1034013.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 11
-    },
-    {
-      "data": {
-        "id": "lee-1034004",
-        "county": "Lee",
-        "booking_number": "1034004",
-        "booked": "2026-10-14",
-        "name": "TREJO REYES, ALONSO",
-        "age": 39,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "BATTERY (BATTERY ON PERSON 65+ YOA)",
-            "statute": "784.08-2c",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "CRUELTY TOWARD CHILD (ABUSE CHILD WITHOUT GREAT BODILY HARM)",
-            "statute": "827.03-2c",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          }
-        ],
-        "bond": null,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
-        "charge_score": 3.05,
-        "photo": "mugshots/lee-1034004.jpg",
-        "photo_score": 0.58,
-        "score": 0.325,
-        "reel": "reels/lee-1034004.mp4"
+        "score": 0.418,
+        "reel": "reels/lee-1034075.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -649,51 +584,99 @@
     },
     {
       "data": {
-        "id": "lee-1033991",
+        "id": "lee-1034069",
         "county": "Lee",
-        "booking_number": "1033991",
-        "booked": "2026-10-14",
-        "name": "ROBERTS, MICHAEL JAMES",
-        "age": 34,
+        "booking_number": "1034069",
+        "booked": "2026-10-15",
+        "name": "VERRELLI, ELIO",
+        "age": 52,
         "sex": "M",
         "charges": [
           {
-            "desc": "BURGL (BURGLARY OF OCCUPIED DWELLING UNARMED)",
-            "statute": "810.02-3a",
+            "desc": "LEWD LASCV BEHAVIOR (MOLEST VIC LESS 12YOA OFFENDER 18 YOA OR OLDER)",
+            "statute": "800.04-5b",
             "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           },
           {
-            "desc": "LARC (GRAND THEFT PROP DWELLING/CURTILAGE $40-$750)",
-            "statute": "812.014-2d1",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "DAMAGE PROP-CRIM MISCH (CRIMINAL MISCHIEF DAMAGE PROPERTY $1000+)",
-            "statute": "806.13-1b3",
+            "desc": "LEWD LASCV BEHAVIOR (18+ YOA MOLEST VICTIM 12-16 YOA)",
+            "statute": "800.04-5c2",
             "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           }
         ],
-        "bond": 11500.0,
-        "agency": "CAPE CORAL PD",
-        "in_custody": false,
-        "charge_score": 4.63,
-        "photo": "mugshots/lee-1033991.jpg",
-        "photo_score": 0.13,
-        "score": 0.308,
-        "reel": "reels/lee-1033991.mp4"
+        "bond": null,
+        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "in_custody": true,
+        "charge_score": 4.3,
+        "photo": "mugshots/lee-1034069.jpg",
+        "photo_score": 0.45,
+        "score": 0.379,
+        "reel": "reels/lee-1034069.mp4"
       },
       "posted": false,
       "posted_at": null,
       "id": 13
+    },
+    {
+      "data": {
+        "id": "polk-2631448",
+        "county": "Polk",
+        "booking_number": "2631448",
+        "booked": "2026-10-15",
+        "name": "HOUSTON, ROBERT CLIFTON",
+        "age": 52,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Traffick Amphetamine Methamphet. >",
+            "statute": "893.135.1F1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) TRAFFICK AMPHETAMINE METHAMPHET >=14GRMS",
+            "count": 1
+          },
+          {
+            "desc": "Resist Officer without Violence",
+            "statute": "843.02",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) ROWOV",
+            "count": 1
+          },
+          {
+            "desc": "POSS OF DRUG PARAPHERNAL",
+            "statute": "893.147.1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) POSS OF DRUG PARAPHERNAL",
+            "count": 1
+          },
+          {
+            "desc": "Poss Harmful New Legend Drug WO Pr",
+            "statute": "499.03.1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) POSS HARMFUL NEW LEGEND DRUG WO PRESCRIP",
+            "count": 1
+          }
+        ],
+        "bond": 2250.0,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 4.08,
+        "photo": "mugshots/polk-2631448.jpg",
+        "photo_score": 0.38,
+        "score": 0.325,
+        "reel": "reels/polk-2631448.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 14
     }
   ]
 }

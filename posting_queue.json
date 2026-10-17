@@ -378,13 +378,14 @@
         "agency": "ORANGE COUNTY SHERIFF OFFICE",
         "in_custody": true,
         "charge_score": 6.2,
-        "photo": "mugshots/orange-26034181.jpg",
+        "photo": null,
         "photo_score": 0.32,
         "score": 0.55,
-        "reel": "reels/orange-26034181.mp4"
+        "reel": "reels/orange-26034181.mp4",
+        "media_id": "17953463199297610"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-16T21:16:17.676927-04:00",
       "id": 8
     },
     {

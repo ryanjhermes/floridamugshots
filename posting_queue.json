@@ -455,13 +455,14 @@
         "agency": "APOPKA PD",
         "in_custody": true,
         "charge_score": 4.8,
-        "photo": "mugshots/orange-26034366.jpg",
+        "photo": null,
         "photo_score": 0.33,
         "score": 0.628,
-        "reel": "reels/orange-26034366.mp4"
+        "reel": "reels/orange-26034366.mp4",
+        "media_id": "18354518221173584"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-18T21:08:59.993460-04:00",
       "id": 10
     },
     {

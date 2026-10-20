@@ -280,13 +280,14 @@
         "agency": "",
         "in_custody": true,
         "charge_score": 7.1,
-        "photo": "mugshots/lee-1034322.jpg",
+        "photo": null,
         "photo_score": 0.29,
         "score": 0.6,
-        "reel": "reels/lee-1034322.mp4"
+        "reel": "reels/lee-1034322.mp4",
+        "media_id": "17915952090467043"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-20T19:09:45.043850-04:00",
       "id": 6
     },
     {

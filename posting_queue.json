@@ -395,13 +395,14 @@
         "agency": "LEE COUNTY SHERIFFS OFFICE",
         "in_custody": true,
         "charge_score": 4.6,
-        "photo": "mugshots/lee-1034242.jpg",
+        "photo": null,
         "photo_score": 0.34,
         "score": 0.675,
-        "reel": "reels/lee-1034242.mp4"
+        "reel": "reels/lee-1034242.mp4",
+        "media_id": "18022381487722703"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-19T21:44:31.885915-04:00",
       "id": 8
     },
     {

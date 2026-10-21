@@ -271,13 +271,14 @@
         "agency": "FLORIDA HIGHWAY PATROL",
         "in_custody": true,
         "charge_score": 7.8,
-        "photo": "mugshots/orange-26034746.jpg",
+        "photo": null,
         "photo_score": 0.19,
         "score": 0.674,
-        "reel": "reels/orange-26034746.mp4"
+        "reel": "reels/orange-26034746.mp4",
+        "media_id": "18345409189254437"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-21T19:14:52.828730-04:00",
       "id": 6
     },
     {

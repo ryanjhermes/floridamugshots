@@ -185,13 +185,14 @@
         "agency": "",
         "in_custody": false,
         "charge_score": 5.5,
-        "photo": "mugshots/lee-1034491.jpg",
+        "photo": null,
         "photo_score": 0.57,
         "score": 0.693,
-        "reel": "reels/lee-1034491.mp4"
+        "reel": "reels/lee-1034491.mp4",
+        "media_id": "17963972133211930"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-23T15:56:38.061305-04:00",
       "id": 5
     },
     {

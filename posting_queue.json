@@ -1,139 +1,7 @@
 {
-  "created_at": "2026-10-24T07:21:48.781565-04:00",
-  "day": "2026-10-23",
+  "created_at": "2026-10-25T07:52:02.095081-04:00",
+  "day": "2026-10-24",
   "entries": [
-    {
-      "data": {
-        "id": "orange-26034973",
-        "county": "Orange",
-        "booking_number": "26034973",
-        "booked": "2026-10-22",
-        "name": "ZEIGLER, JEREMY TOVOREZ",
-        "age": 41,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "URINATING OR DEFECATING IN PUBLIC",
-            "statute": "CITY43.6",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORLANDO PD",
-        "in_custody": true,
-        "charge_score": 6.5,
-        "photo": null,
-        "photo_score": 0.74,
-        "score": 0.898,
-        "media_id": "18112648331158647"
-      },
-      "posted": true,
-      "posted_at": "2026-10-23T11:43:41.727792-04:00",
-      "id": 1
-    },
-    {
-      "data": {
-        "id": "lee-1034491",
-        "county": "Lee",
-        "booking_number": "1034491",
-        "booked": "2026-10-22",
-        "name": "PEREZ-FERNANDEZ, JORGE",
-        "age": 69,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "ANIMAL ABUSE REGISTRATION - COUNTY ORDINANCE",
-            "statute": "CO23-30",
-            "level": "",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          }
-        ],
-        "bond": null,
-        "agency": "",
-        "in_custody": false,
-        "charge_score": 5.5,
-        "photo": null,
-        "photo_score": 0.57,
-        "score": 0.693,
-        "media_id": "17963972133211930"
-      },
-      "posted": true,
-      "posted_at": "2026-10-23T15:56:38.061305-04:00",
-      "id": 2
-    },
-    {
-      "data": {
-        "id": "orange-26034937",
-        "county": "Orange",
-        "booking_number": "26034937",
-        "booked": "2026-10-22",
-        "name": "RIVERA, ROAISHA",
-        "age": 25,
-        "sex": "F",
-        "charges": [
-          {
-            "desc": "URINATING OR DEFECATING IN PUBLIC",
-            "statute": "CITY43.6",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORLANDO PD",
-        "in_custody": true,
-        "charge_score": 6.5,
-        "photo": null,
-        "photo_score": 0.18,
-        "score": 0.671,
-        "media_id": "18141812338617638"
-      },
-      "posted": true,
-      "posted_at": "2026-10-23T19:05:14.446964-04:00",
-      "id": 3
-    },
-    {
-      "data": {
-        "id": "orange-26034934",
-        "county": "Orange",
-        "booking_number": "26034934",
-        "booked": "2026-10-22",
-        "name": "GUZMAN, MODESTO EDUARDO",
-        "age": 25,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "AGGRAVATED BATTERY WITH A WEAPON",
-            "statute": "784.045(1)(A)(2)-11",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "BATTERY (DATING VIOLENCE)",
-            "statute": "784.03-15",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORLANDO PD",
-        "in_custody": true,
-        "charge_score": 5.3,
-        "photo": null,
-        "photo_score": 0.57,
-        "score": 0.668,
-        "media_id": "18074168669743561"
-      },
-      "posted": true,
-      "posted_at": "2026-10-23T21:32:25.509142-04:00",
-      "id": 4
-    },
     {
       "data": {
         "id": "orange-26035053",
@@ -187,12 +55,11 @@
         "photo": null,
         "photo_score": 0.29,
         "score": 0.714,
-        "reel": "reels/orange-26035053.mp4",
         "media_id": "18135548737657347"
       },
       "posted": true,
       "posted_at": "2026-10-24T10:28:44.959145-04:00",
-      "id": 5
+      "id": 1
     },
     {
       "data": {
@@ -236,12 +103,11 @@
         "photo": null,
         "photo_score": 0.71,
         "score": 0.685,
-        "reel": "reels/lee-1034508.mp4",
         "media_id": "18100047917434382"
       },
       "posted": true,
       "posted_at": "2026-10-24T14:05:53.430474-04:00",
-      "id": 6
+      "id": 2
     },
     {
       "data": {
@@ -282,12 +148,11 @@
         "photo": null,
         "photo_score": 0.53,
         "score": 0.57,
-        "reel": "reels/orange-26035064.mp4",
         "media_id": "18115519028134903"
       },
       "posted": true,
       "posted_at": "2026-10-24T16:43:42.399775-04:00",
-      "id": 7
+      "id": 3
     },
     {
       "data": {
@@ -363,12 +228,11 @@
         "photo": null,
         "photo_score": 0.68,
         "score": 0.546,
-        "reel": "reels/lee-1034529.mp4",
         "media_id": "18644595784020240"
       },
       "posted": true,
       "posted_at": "2026-10-24T19:07:47.528656-04:00",
-      "id": 8
+      "id": 4
     },
     {
       "data": {
@@ -395,26 +259,198 @@
         "photo": null,
         "photo_score": 0.2,
         "score": 0.522,
-        "reel": "reels/orange-26035091.mp4",
         "media_id": "18117908411077963"
       },
       "posted": true,
       "posted_at": "2026-10-24T21:07:48.548271-04:00",
+      "id": 5
+    },
+    {
+      "data": {
+        "id": "polk-2632582",
+        "county": "Polk",
+        "booking_number": "2632582",
+        "booked": "2026-10-24",
+        "name": "MARRISON, JOHN",
+        "age": 43,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Robbery by Sudden Snatching WO Firearm Weapon",
+            "statute": "812.131.2B",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Robbery by Sudden Snatching WO Firearm Weapon",
+            "count": 1
+          },
+          {
+            "desc": "Unarmed Burglary of Occupied Dwelling",
+            "statute": "810.02.3A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Unarmed Burglary of Occupied Dwelling",
+            "count": 1
+          },
+          {
+            "desc": "Viol Inj for Protection against Domestic Viol",
+            "statute": "741.31.4A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Viol Inj for Protection against Domestic Viol",
+            "count": 1
+          },
+          {
+            "desc": "Grand Theft Property Dwelling Curt",
+            "statute": "812.014.2D2",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Larceny   Grand Theft Property Dwelling Curtilage $750+",
+            "count": 1
+          }
+        ],
+        "bond": 10000.0,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 5.9,
+        "photo": "mugshots/polk-2632582.jpg",
+        "photo_score": 0.82,
+        "score": 0.754,
+        "reel": "reels/polk-2632582.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 6
+    },
+    {
+      "data": {
+        "id": "polk-2632585",
+        "county": "Polk",
+        "booking_number": "2632585",
+        "booked": "2026-10-24",
+        "name": "WILSON, KESHON SHEMAR",
+        "age": 29,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Shoot Missile into Dwell Veh Bldg Aircraft",
+            "statute": "790.19",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Shoot Missile into Dwell Veh Bldg Aircraft",
+            "count": 1
+          },
+          {
+            "desc": "Follow Harass Cyberstalk Another",
+            "statute": "784.048.2",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Follow Harass Cyberstalk Another",
+            "count": 1
+          },
+          {
+            "desc": "Dom Viol Agg Asslt Deadly Weap WO Intent to Kill",
+            "statute": "784.021.1A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Dom Viol Agg Asslt Deadly Weap WO Intent to Kill",
+            "count": 1
+          }
+        ],
+        "bond": null,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 7.6,
+        "photo": "mugshots/polk-2632585.jpg",
+        "photo_score": 0.34,
+        "score": 0.737,
+        "reel": "reels/polk-2632585.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 7
+    },
+    {
+      "data": {
+        "id": "orange-26035143",
+        "county": "Orange",
+        "booking_number": "26035143",
+        "booked": "2026-10-24",
+        "name": "GORNALL, BRADLEY TODD",
+        "age": 33,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "BURGLARY OF DWELLING",
+            "statute": "810.02(1)(B)(1)-4",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 4.0,
+        "photo": "mugshots/orange-26035143.jpg",
+        "photo_score": 0.91,
+        "score": 0.595,
+        "reel": "reels/orange-26035143.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 8
+    },
+    {
+      "data": {
+        "id": "orange-26035105",
+        "county": "Orange",
+        "booking_number": "26035105",
+        "booked": "2026-10-24",
+        "name": "SIMS, DAVID SOLOMOUS",
+        "age": 44,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "EXPOSURE OF SEXUAL ORGANS 1ST OFFENSE",
+            "statute": "800.03(1)(A)",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORLANDO PD",
+        "in_custody": true,
+        "charge_score": 6.75,
+        "photo": "mugshots/orange-26035105.jpg",
+        "photo_score": 0.19,
+        "score": 0.59,
+        "reel": "reels/orange-26035105.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
       "id": 9
     },
     {
       "data": {
-        "id": "orange-26035083",
+        "id": "orange-26035166",
         "county": "Orange",
-        "booking_number": "26035083",
-        "booked": "2026-10-23",
-        "name": "POLLOCK, JOCLYN SELINA",
-        "age": 26,
-        "sex": "F",
+        "booking_number": "26035166",
+        "booked": "2026-10-24",
+        "name": "CLEMONS, JARRETT SHAYUN",
+        "age": 37,
+        "sex": "M",
         "charges": [
           {
-            "desc": "AGGRAVATED ASSAULT W/ DEADLY WEAPON (DOM VIO)",
-            "statute": "784.021(1)(A)-21",
+            "desc": "BURGLARY OF CONVEYANCE W/ASSAULT/BATTERY",
+            "statute": "810.02(1)(B)(2)-15",
+            "level": "Felony",
+            "degree": "FIRST",
+            "detail": ""
+          },
+          {
+            "desc": "BATTERY ON PERSON 65 YEARS OF AGE OR OLDER",
+            "statute": "784.08(2)(C)",
             "level": "Felony",
             "degree": "THIRD",
             "detail": ""
@@ -423,11 +459,11 @@
         "bond": null,
         "agency": "ORLANDO PD",
         "in_custody": true,
-        "charge_score": 4.5,
-        "photo": "mugshots/orange-26035083.jpg",
-        "photo_score": 0.44,
-        "score": 0.429,
-        "reel": "reels/orange-26035083.mp4"
+        "charge_score": 4.8,
+        "photo": "mugshots/orange-26035166.jpg",
+        "photo_score": 0.58,
+        "score": 0.543,
+        "reel": "reels/orange-26035166.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -435,30 +471,30 @@
     },
     {
       "data": {
-        "id": "orange-26035046",
+        "id": "orange-26035157",
         "county": "Orange",
-        "booking_number": "26035046",
-        "booked": "2026-10-23",
-        "name": "VAZQUEZPEDROSA, ROBERTO ZURIEL",
+        "booking_number": "26035157",
+        "booked": "2026-10-24",
+        "name": "REDD, JASON JAMES",
         "age": 40,
         "sex": "M",
         "charges": [
           {
-            "desc": "FAILURE OF DEFENDANT TO APPEAR",
-            "statute": "843.15(1)(A)",
+            "desc": "SEXUAL BATTERY WITH A CHILD (12-18) - FAMILIAL/CUSTODIAL",
+            "statute": "794.011(8)(B)",
             "level": "Felony",
-            "degree": "THIRD",
+            "degree": "FIRST",
             "detail": ""
           }
         ],
         "bond": null,
         "agency": "ORANGE COUNTY SHERIFF OFFICE",
         "in_custody": true,
-        "charge_score": 2.0,
-        "photo": "mugshots/orange-26035046.jpg",
-        "photo_score": 1.0,
-        "score": 0.419,
-        "reel": "reels/orange-26035046.mp4"
+        "charge_score": 5.0,
+        "photo": "mugshots/orange-26035157.jpg",
+        "photo_score": 0.45,
+        "score": 0.513,
+        "reel": "reels/orange-26035157.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -466,55 +502,51 @@
     },
     {
       "data": {
-        "id": "lee-1034499",
-        "county": "Lee",
-        "booking_number": "1034499",
-        "booked": "2026-10-23",
-        "name": "PRESLEY, JAQUAN RODNEY",
-        "age": 24,
+        "id": "orange-26035122",
+        "county": "Orange",
+        "booking_number": "26035122",
+        "booked": "2026-10-24",
+        "name": "JACKSON, KEDRICK DARNELL",
+        "age": 42,
         "sex": "M",
         "charges": [
           {
-            "desc": "POSSESSION OF WEAPON - OR AMMO BY CONVICTED FLA FELON",
-            "statute": "790.23-1a",
+            "desc": "POSS OF FIREARM/AMMO BY CONVICTED FELON",
+            "statute": "790.23-14",
             "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
+            "degree": "SECOND",
+            "detail": ""
           },
           {
-            "desc": "RESIST OFFICER - OBSTRUCT W/O VIOLENCE",
-            "statute": "843.02",
+            "desc": "POSSESSION OF FIREARM BY CONVICTED FELON",
+            "statute": "790.23-9",
             "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
+            "degree": "SECOND",
+            "detail": ""
           },
           {
-            "desc": "DRUGS-POSSESS (POSSESS CONTROLLED SUBSTANCE W/O PRESCRIPTION)",
-            "statute": "893.13-6a",
+            "desc": "POSS 3,4-METHYLEN.-METHAMP. (MDMA/ECSTASY)",
+            "statute": "893.13(6)(A)-27",
             "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
+            "degree": "THIRD",
+            "detail": ""
           },
           {
-            "desc": "POSSESSION OF WEAPON (OR AMMO BY CONVICTED FLA FELON)",
-            "statute": "790.23-1a",
+            "desc": "POSSESSION OF CANNABIS > 20 GRAMS",
+            "statute": "893.13(6)(A)-5",
             "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
+            "degree": "THIRD",
+            "detail": ""
           }
         ],
-        "bond": 30000.0,
-        "agency": "FORT MYERS POLICE DEPT",
+        "bond": null,
+        "agency": "ORLANDO PD",
         "in_custody": true,
-        "charge_score": 3.64,
-        "photo": "mugshots/lee-1034499.jpg",
-        "photo_score": 0.38,
-        "score": 0.323,
-        "reel": "reels/lee-1034499.mp4"
+        "charge_score": 3.4,
+        "photo": "mugshots/orange-26035122.jpg",
+        "photo_score": 0.82,
+        "score": 0.495,
+        "reel": "reels/orange-26035122.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -522,17 +554,17 @@
     },
     {
       "data": {
-        "id": "lee-1034530",
+        "id": "lee-1034561",
         "county": "Lee",
-        "booking_number": "1034530",
-        "booked": "2026-10-23",
-        "name": "BIBEAU, GENESIS ANGELEE",
-        "age": 22,
+        "booking_number": "1034561",
+        "booked": "2026-10-24",
+        "name": "FIELDS, JANEVA QUANTIA",
+        "age": 28,
         "sex": "F",
         "charges": [
           {
-            "desc": "LARC (PETIT THEFT MERCH FARM TRANSIT 2+ PRIOR CONV)",
-            "statute": "812.014-3c",
+            "desc": "DRUGS-POSSESS (POSSESS CONTROLLED SUBSTANCE W/O PRESCRIPTION)",
+            "statute": "893.13-6a",
             "level": "Felony",
             "degree": "",
             "detail": "",
@@ -540,13 +572,13 @@
           }
         ],
         "bond": 2500.0,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "agency": "FORT MYERS POLICE DEPT",
         "in_custody": false,
         "charge_score": 2.2,
-        "photo": "mugshots/lee-1034530.jpg",
-        "photo_score": 0.68,
-        "score": 0.309,
-        "reel": "reels/lee-1034530.mp4"
+        "photo": "mugshots/lee-1034561.jpg",
+        "photo_score": 0.98,
+        "score": 0.437,
+        "reel": "reels/lee-1034561.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -554,35 +586,75 @@
     },
     {
       "data": {
-        "id": "lee-1034523",
-        "county": "Lee",
-        "booking_number": "1034523",
-        "booked": "2026-10-23",
-        "name": "BROOKS, RODNEY WILLIAM JR",
-        "age": 30,
-        "sex": "M",
+        "id": "polk-2632542",
+        "county": "Polk",
+        "booking_number": "2632542",
+        "booked": "2026-10-24",
+        "name": "HART, MADISON M",
+        "age": 24,
+        "sex": "F",
         "charges": [
           {
-            "desc": "PROB VIOLATION",
-            "statute": "948.06",
+            "desc": "Dom Viol Battery Touch or Strike",
+            "statute": "784.03.1A1",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Dom Viol Battery Touch or Strike",
+            "count": 1
+          },
+          {
+            "desc": "Dom Viol Agg Asslt Deadly Weap WO Intent to Kill",
+            "statute": "784.021.1A",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) Dom Viol Agg Asslt Deadly Weap WO Intent to Kill",
+            "count": 1
+          }
+        ],
+        "bond": null,
+        "agency": "Polk County Sheriffs Office",
+        "in_custody": true,
+        "charge_score": 2.05,
+        "photo": "mugshots/polk-2632542.jpg",
+        "photo_score": 1.0,
+        "score": 0.431,
+        "reel": "reels/polk-2632542.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 14
+    },
+    {
+      "data": {
+        "id": "lee-1034558",
+        "county": "Lee",
+        "booking_number": "1034558",
+        "booked": "2026-10-24",
+        "name": "DREYLICK, MARISSA DANIELLE",
+        "age": 31,
+        "sex": "F",
+        "charges": [
+          {
+            "desc": "DRUGS-POSSESS (POSSESS CONTROLLED SUBSTANCE W/O PRESCRIPTION)",
+            "statute": "893.13-6a",
             "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           }
         ],
-        "bond": null,
+        "bond": 0.0,
         "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
+        "in_custody": false,
         "charge_score": 2.0,
-        "photo": "mugshots/lee-1034523.jpg",
-        "photo_score": 0.64,
-        "score": 0.274,
-        "reel": "reels/lee-1034523.mp4"
+        "photo": "mugshots/lee-1034558.jpg",
+        "photo_score": 0.99,
+        "score": 0.422,
+        "reel": "reels/lee-1034558.mp4"
       },
       "posted": false,
       "posted_at": null,
-      "id": 14
+      "id": 15
     }
   ]
 }

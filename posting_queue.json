@@ -221,13 +221,14 @@
         "agency": "CAPE CORAL PD",
         "in_custody": true,
         "charge_score": 7.3,
-        "photo": "mugshots/lee-1034806.jpg",
+        "photo": null,
         "photo_score": 0.12,
         "score": 0.576,
-        "reel": "reels/lee-1034806.mp4"
+        "reel": "reels/lee-1034806.mp4",
+        "media_id": "18098201195450904"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-10-29T18:41:57.303530-04:00",
       "id": 5
     },
     {

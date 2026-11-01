@@ -1,184 +1,7 @@
 {
-  "created_at": "2026-10-31T08:53:41.679473-04:00",
-  "day": "2026-10-30",
+  "created_at": "2026-11-01T08:43:05.541948-05:00",
+  "day": "2026-10-31",
   "entries": [
-    {
-      "data": {
-        "id": "orange-26035614",
-        "county": "Orange",
-        "booking_number": "26035614",
-        "booked": "2026-10-29",
-        "name": "HUGGINS, SHANICE JASMIN",
-        "age": 31,
-        "sex": "F",
-        "charges": [
-          {
-            "desc": "SHOOTING FROM VEHICLE W/IN 1000' OF PERSON",
-            "statute": "790.15(2)",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "ATTEMPTED AGG. BATTERY WITH MOTOR VEHICLE",
-            "statute": "784.045(1)(A)(2)-5",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "AGGRAVATED ASSAULT WITH A FIREARM",
-            "statute": "784.021(1)(A)-1",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "AGGRAVATED ASSAULT WITH A FIREARM",
-            "statute": "784.021(1)(A)-15",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORANGE COUNTY SHERIFF OFFICE",
-        "in_custody": true,
-        "charge_score": 6.9,
-        "photo": null,
-        "photo_score": 0.7,
-        "score": 0.792,
-        "media_id": "18111135269239395"
-      },
-      "posted": true,
-      "posted_at": "2026-10-30T13:00:46.355884-04:00",
-      "id": 1
-    },
-    {
-      "data": {
-        "id": "orange-26035612",
-        "county": "Orange",
-        "booking_number": "26035612",
-        "booked": "2026-10-29",
-        "name": "JONES, SHELWYN DERRICK",
-        "age": 45,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "URINATING OR DEFECATING IN PUBLIC",
-            "statute": "CITY43.6",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSSESSION OF FIREARM BY CONVICTED FELON",
-            "statute": "790.23-9",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "POSS. OF AMMUNITION BY CONVICTED FELON",
-            "statute": "790.23-11",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "CARRYING A CONCEALED FIREARM",
-            "statute": "790.01(3)",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "ALCOHOLIC BEVERAGES, OPEN CONTAINERS",
-            "statute": "CITY33.06",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORLANDO PD",
-        "in_custody": true,
-        "charge_score": 7.7,
-        "photo": null,
-        "photo_score": 0.46,
-        "score": 0.784,
-        "media_id": "18107925245576989"
-      },
-      "posted": true,
-      "posted_at": "2026-10-30T17:27:57.497465-04:00",
-      "id": 2
-    },
-    {
-      "data": {
-        "id": "orange-26035627",
-        "county": "Orange",
-        "booking_number": "26035627",
-        "booked": "2026-10-29",
-        "name": "JUSTICE, DEON JAKAYLEN",
-        "age": 26,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "FLEE/ELUDE POLICE-FLEE ELUDE HIGH SPEED OR DISR SAFETY PERS PROP",
-            "statute": "316.1935(3)(A)",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "RESISTING OFFICER WITHOUT VIOLENCE",
-            "statute": "843.02",
-            "level": "Misdemeanor",
-            "degree": "FIRST",
-            "detail": ""
-          },
-          {
-            "desc": "LEAVING SCENE OF ACC./UNATT. VEH. OR PROP.",
-            "statute": "316.063(1)",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "DANGEROUS EXCESSIVE SPEEDING (50 MPH OR MORE)",
-            "statute": "316.1922(1)(A)",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "MOVING TRAFFIC VIOL-RECKLESS DRIVING 1ST OFF",
-            "statute": "316.192(1)(A)",
-            "level": "Misdemeanor",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "DRIVING WHILE LICENSE REVOKED AS HAB. OFF.",
-            "statute": "322.34(5)",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "2026CF005275AO",
-        "in_custody": true,
-        "charge_score": 5.7,
-        "photo": null,
-        "photo_score": 0.9,
-        "score": 0.739,
-        "media_id": "18233797279323923"
-      },
-      "posted": true,
-      "posted_at": "2026-10-30T21:32:42.301307-04:00",
-      "id": 3
-    },
     {
       "data": {
         "id": "orange-26035709",
@@ -232,12 +55,11 @@
         "photo": null,
         "photo_score": 0.99,
         "score": 0.736,
-        "reel": "reels/orange-26035709.mp4",
         "media_id": "18118663756790803"
       },
       "posted": true,
       "posted_at": "2026-10-31T12:02:37.951718-04:00",
-      "id": 4
+      "id": 1
     },
     {
       "data": {
@@ -273,12 +95,11 @@
         "photo": null,
         "photo_score": 0.18,
         "score": 0.672,
-        "reel": "reels/lee-1034940.mp4",
         "media_id": "18102702770568857"
       },
       "posted": true,
       "posted_at": "2026-10-31T15:55:39.408244-04:00",
-      "id": 5
+      "id": 2
     },
     {
       "data": {
@@ -340,167 +161,124 @@
         "photo": null,
         "photo_score": 0.95,
         "score": 0.671,
-        "reel": "reels/orange-26035724.mp4",
         "media_id": "18100267694538269"
       },
       "posted": true,
       "posted_at": "2026-10-31T19:20:11.351420-04:00",
-      "id": 6
+      "id": 3
     },
     {
       "data": {
-        "id": "lee-1034905",
-        "county": "Lee",
-        "booking_number": "1034905",
-        "booked": "2026-10-30",
-        "name": "MARTINEZ, ABDIEL",
-        "age": 44,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "MOVING TRAFFIC VIOL (DWLSR DUI/REFUSAL/SERIOUS BOD INJ/FLEE ELUDE)",
-            "statute": "322.34-2c",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "DUI-UNLAW BLD ALCH (DUI ALCOHOL OR DRUGS 4TH OR SUBSQ OFF)",
-            "statute": "316.193-2b3",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "DUI-UNLAW BLD ALCH (REFUSAL SUBMIT DUI TESTING SUBSQ OFF)",
-            "statute": "316.1939-1e",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "RESIST OFFICER (OBSTRUCT W/O VIOLENCE)",
-            "statute": "843.02",
-            "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          }
-        ],
-        "bond": null,
-        "agency": "CAPE CORAL PD",
-        "in_custody": true,
-        "charge_score": 4.9,
-        "photo": "mugshots/lee-1034905.jpg",
-        "photo_score": 0.99,
-        "score": 0.657,
-        "reel": "reels/lee-1034905.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 7
-    },
-    {
-      "data": {
-        "id": "orange-26035800",
+        "id": "orange-26035882",
         "county": "Orange",
-        "booking_number": "26035800",
-        "booked": "2026-10-30",
-        "name": "RIVERA, EMANUEL DAHJAI",
-        "age": 27,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "BURGLARY OF OCCUPIED DWELLING",
-            "statute": "810.02(3)-19",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "VIOLATION OF PROBATION",
-            "statute": "948.06-1",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORANGE COUNTY SHERIFF OFFICE",
-        "in_custody": true,
-        "charge_score": 4.3,
-        "photo": "mugshots/orange-26035800.jpg",
-        "photo_score": 1.0,
-        "score": 0.6,
-        "reel": "reels/orange-26035800.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 8
-    },
-    {
-      "data": {
-        "id": "orange-26035799",
-        "county": "Orange",
-        "booking_number": "26035799",
-        "booked": "2026-10-30",
-        "name": "LYONS, ANGEL JAMAHTI LATR",
-        "age": 21,
-        "sex": "M",
-        "charges": [
-          {
-            "desc": "BURGLARY OF OCCUPIED DWELLING",
-            "statute": "810.02(3)-19",
-            "level": "Felony",
-            "degree": "SECOND",
-            "detail": ""
-          },
-          {
-            "desc": "GRAND THEFT 3RD DEGREE-MOTOR VEHICLE",
-            "statute": "812.014(2)(C)(6)",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          },
-          {
-            "desc": "VIOLATION OF PROBATION",
-            "statute": "948.06-1",
-            "level": "Felony",
-            "degree": "THIRD",
-            "detail": ""
-          }
-        ],
-        "bond": null,
-        "agency": "ORANGE COUNTY SHERIFF OFFICE",
-        "in_custody": true,
-        "charge_score": 4.6,
-        "photo": "mugshots/orange-26035799.jpg",
-        "photo_score": 0.75,
-        "score": 0.532,
-        "reel": "reels/orange-26035799.mp4"
-      },
-      "posted": false,
-      "posted_at": null,
-      "id": 9
-    },
-    {
-      "data": {
-        "id": "orange-26035786",
-        "county": "Orange",
-        "booking_number": "26035786",
-        "booked": "2026-10-30",
-        "name": "HARRIS, MOLLY LOUISE",
-        "age": 31,
+        "booking_number": "26035882",
+        "booked": "2026-10-31",
+        "name": "KINGGUILLUAME, MAHOGANY LACHETTE",
+        "age": 30,
         "sex": "F",
         "charges": [
+          {
+            "desc": "ATTEMPTED SECOND DEGREE MURDER",
+            "statute": "782.04(2)-17",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          },
+          {
+            "desc": "AGG. BATTERY (GREAT BODILY HARM) DOM. VIO.",
+            "statute": "784.045(1)(A)(1)-16",
+            "level": "Felony",
+            "degree": "SECOND",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 7.8,
+        "photo": "mugshots/orange-26035882.jpg",
+        "photo_score": 0.43,
+        "score": 0.759,
+        "reel": "reels/orange-26035882.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 4
+    },
+    {
+      "data": {
+        "id": "orange-26035852",
+        "county": "Orange",
+        "booking_number": "26035852",
+        "booked": "2026-10-31",
+        "name": "NICKERSON, ROBERT ANTHONY",
+        "age": 32,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "URINATING OR DEFECATING IN PUBLIC",
+            "statute": "CITY43.6",
+            "level": "Misdemeanor",
+            "degree": "SECOND",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORLANDO PD",
+        "in_custody": true,
+        "charge_score": 6.5,
+        "photo": "mugshots/orange-26035852.jpg",
+        "photo_score": 0.72,
+        "score": 0.744,
+        "reel": "reels/orange-26035852.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 5
+    },
+    {
+      "data": {
+        "id": "orange-26035849",
+        "county": "Orange",
+        "booking_number": "26035849",
+        "booked": "2026-10-31",
+        "name": "BIGGOMS, TOMMY MORRIS",
+        "age": 42,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "EXPOSURE OF SEXUAL ORGANS (NAKED)",
+            "statute": "800.03(1)(B)",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
+            "detail": ""
+          },
           {
             "desc": "BATTERY ON LAW ENFORCEMENT OFFICER",
             "statute": "784.07(2)(B)-3",
             "level": "Felony",
             "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "TAMPER WITH PHYSICAL EVIDENCE",
+            "statute": "918.13(1)(A)-7",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "POSSESSION OF CONTROLLED SUBSTANCE",
+            "statute": "893.13(6)(A)-123",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          },
+          {
+            "desc": "POSSESS OF CANNABIS LESS THAN 20 GRAMS",
+            "statute": "893.13(6)(B)-4",
+            "level": "Misdemeanor",
+            "degree": "FIRST",
             "detail": ""
           },
           {
@@ -512,112 +290,126 @@
           }
         ],
         "bond": null,
-        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "agency": "ORLANDO PD",
         "in_custody": true,
-        "charge_score": 4.8,
-        "photo": "mugshots/orange-26035786.jpg",
-        "photo_score": 0.68,
-        "score": 0.523,
-        "reel": "reels/orange-26035786.mp4"
+        "charge_score": 7.95,
+        "photo": "mugshots/orange-26035849.jpg",
+        "photo_score": 0.23,
+        "score": 0.691,
+        "reel": "reels/orange-26035849.mp4"
       },
       "posted": false,
       "posted_at": null,
-      "id": 10
+      "id": 6
     },
     {
       "data": {
-        "id": "lee-1034943",
+        "id": "orange-26035895",
+        "county": "Orange",
+        "booking_number": "26035895",
+        "booked": "2026-10-31",
+        "name": "LORQUET, MARC JOSUE",
+        "age": 28,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "AGGRAVATED ASSAULT WITH A DEADLY WEAPON",
+            "statute": "784.021(1)(A)",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORANGE COUNTY SHERIFF OFFICE",
+        "in_custody": true,
+        "charge_score": 4.5,
+        "photo": "mugshots/orange-26035895.jpg",
+        "photo_score": 0.97,
+        "score": 0.639,
+        "reel": "reels/orange-26035895.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 7
+    },
+    {
+      "data": {
+        "id": "orange-26035850",
+        "county": "Orange",
+        "booking_number": "26035850",
+        "booked": "2026-10-31",
+        "name": "JORDAN, MALIK SHARMEL",
+        "age": 35,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "FLEEING/ATT. TO ELUDE POLICE OFFICER >7/04",
+            "statute": "316.1935(1)-3",
+            "level": "Felony",
+            "degree": "THIRD",
+            "detail": ""
+          }
+        ],
+        "bond": null,
+        "agency": "ORLANDO PD",
+        "in_custody": true,
+        "charge_score": 4.0,
+        "photo": "mugshots/orange-26035850.jpg",
+        "photo_score": 0.92,
+        "score": 0.569,
+        "reel": "reels/orange-26035850.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 8
+    },
+    {
+      "data": {
+        "id": "lee-1034977",
         "county": "Lee",
-        "booking_number": "1034943",
-        "booked": "2026-10-30",
-        "name": "MILLER, AMANDA JAYNE",
-        "age": 40,
+        "booking_number": "1034977",
+        "booked": "2026-10-31",
+        "name": "LASTER, ROCHELLE DELOIS",
+        "age": 42,
         "sex": "F",
         "charges": [
           {
-            "desc": "DUI-UNLAW BLD ALCH (DUI DAMAGE TO PROPERTY OR PERSON OF ANOTHER)",
-            "statute": "316.193-3c1",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "DUI-UNLAW BLD ALCH (REFUSAL SUBMIT DUI TESTING)",
-            "statute": "316.1939-1d",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "CONTROLLED SUBSTANCE (INHALE/INGEST OR POSS W/ INT HARMFUL CHEMICALS)",
-            "statute": "877.111-1",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "HIT AND RUN (ACCIDENT UNATTENDED VEH OR PROP W/O LEAVING ID)",
-            "statute": "316.063-1",
-            "level": "Misdemeanor",
+            "desc": "CRUELTY TOWARD CHILD (ABUSE CHILD WITHOUT GREAT BODILY HARM)",
+            "statute": "827.03-2c",
+            "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           }
         ],
-        "bond": 1800.0,
+        "bond": null,
         "agency": "FORT MYERS POLICE DEPT",
         "in_custody": true,
-        "charge_score": 3.53,
-        "photo": "mugshots/lee-1034943.jpg",
-        "photo_score": 0.68,
-        "score": 0.395,
-        "reel": "reels/lee-1034943.mp4"
+        "charge_score": 2.0,
+        "photo": "mugshots/lee-1034977.jpg",
+        "photo_score": 1.0,
+        "score": 0.4,
+        "reel": "reels/lee-1034977.mp4"
       },
       "posted": false,
       "posted_at": null,
-      "id": 11
+      "id": 9
     },
     {
       "data": {
-        "id": "lee-1034896",
+        "id": "lee-1034949",
         "county": "Lee",
-        "booking_number": "1034896",
-        "booked": "2026-10-30",
-        "name": "BUNTING, DUSTIN TYLER",
-        "age": 38,
-        "sex": "M",
+        "booking_number": "1034949",
+        "booked": "2026-10-31",
+        "name": "JONES, LESA KAY",
+        "age": 60,
+        "sex": "F",
         "charges": [
           {
-            "desc": "MOVING TRAFFIC VIOL (DWLSR REVOCATION EQUIV STATUS 3RD SUB VIOL)",
-            "statute": "322.34-2c",
+            "desc": "DRUGS-POSSESS (POSSESS CONTROLLED SUBSTANCE W/O PRESCRIPTION)",
+            "statute": "893.13-6a",
             "level": "Felony",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "PROB VIOLATION (OR COMMTY CONT RE UNK/FEL/MISD/JUV NON CRITRIA)",
-            "statute": "948.06",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": "",
-            "count": 1
-          },
-          {
-            "desc": "PROB VIOLATION - OR COMMTY CONT RE UNK/FEL/MISD/JUV NON CRITRIA",
-            "statute": "948.06",
-            "level": "Misdemeanor",
-            "degree": "",
-            "detail": "",
-            "count": 2
-          },
-          {
-            "desc": "PROB VIOLATION",
-            "statute": "948.06",
-            "level": "Misdemeanor",
             "degree": "",
             "detail": "",
             "count": 1
@@ -628,17 +420,113 @@
             "level": "",
             "degree": "",
             "detail": "",
+            "count": 3
+          }
+        ],
+        "bond": 5000.0,
+        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "in_custody": true,
+        "charge_score": 2.65,
+        "photo": "mugshots/lee-1034949.jpg",
+        "photo_score": 0.72,
+        "score": 0.353,
+        "reel": "reels/lee-1034949.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 10
+    },
+    {
+      "data": {
+        "id": "polk-2633356",
+        "county": "Polk",
+        "booking_number": "2633356",
+        "booked": "2026-10-31",
+        "name": "BLAKE, CHRISTOPHER PEACE",
+        "age": 55,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "Battery Prior Conviction",
+            "statute": "784.03.2",
+            "level": "",
+            "degree": "",
+            "detail": "(1 cnts) BATTERY PRIOR CONVICTION",
             "count": 1
           }
         ],
-        "bond": 15000.0,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
+        "bond": 5000.0,
+        "agency": "Polk County Sheriffs Office",
         "in_custody": true,
-        "charge_score": 3.79,
-        "photo": "mugshots/lee-1034896.jpg",
-        "photo_score": 0.46,
-        "score": 0.335,
-        "reel": "reels/lee-1034896.mp4"
+        "charge_score": 2.1,
+        "photo": "mugshots/polk-2633356.jpg",
+        "photo_score": 0.8,
+        "score": 0.329,
+        "reel": "reels/polk-2633356.mp4"
+      },
+      "posted": false,
+      "posted_at": null,
+      "id": 11
+    },
+    {
+      "data": {
+        "id": "lee-1034963",
+        "county": "Lee",
+        "booking_number": "1034963",
+        "booked": "2026-10-31",
+        "name": "CHRISTENSEN, CRIS DAVID",
+        "age": 38,
+        "sex": "M",
+        "charges": [
+          {
+            "desc": "AGGRAV STALKING (FOLLOW HARASS CYBERSTALK AFTER INJUNCTION)",
+            "statute": "784.048-4",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "BATTERY (TOUCH OR STRIKE)",
+            "statute": "784.03-1a1",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "AGGRAV ASSLT - WEAPON (AGGRAV ASSLT W/ DEADLY WPN W/O INTENT TO KILL)",
+            "statute": "784.021-1a",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "OBSTRUCTING JUSTICE (HINDER WITN COMMUN INFO TO LEO/JUDGE MISD PROC)",
+            "statute": "914.22-1e",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          },
+          {
+            "desc": "DAMAGE PROP-CRIM MISCH (CRIMINAL MISCHIEF DAMAGE PROPERTY $1000+)",
+            "statute": "806.13-1b3",
+            "level": "Felony",
+            "degree": "",
+            "detail": "",
+            "count": 1
+          }
+        ],
+        "bond": null,
+        "agency": "CAPE CORAL PD",
+        "in_custody": true,
+        "charge_score": 3.95,
+        "photo": "mugshots/lee-1034963.jpg",
+        "photo_score": 0.33,
+        "score": 0.328,
+        "reel": "reels/lee-1034963.mp4"
       },
       "posted": false,
       "posted_at": null,
@@ -646,39 +534,39 @@
     },
     {
       "data": {
-        "id": "lee-1034890",
+        "id": "lee-1034961",
         "county": "Lee",
-        "booking_number": "1034890",
-        "booked": "2026-10-30",
-        "name": "PIPIA, DION RUSSEL",
-        "age": 33,
+        "booking_number": "1034961",
+        "booked": "2026-10-31",
+        "name": "BRANDAUER, DOMINICK NANTAI",
+        "age": 28,
         "sex": "M",
         "charges": [
           {
-            "desc": "BATTERY (BATTERY ON PERSON 65+ YOA)",
-            "statute": "784.08-2c",
+            "desc": "DUI-UNLAW BLD ALCH (0.15 OR HIGHER OR W PERSON UNDER 18 IN VEHICLE)",
+            "statute": "316.193-4",
             "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           },
           {
-            "desc": "OUT-OF-COUNTY WARRANT - OUT-OF-COUNTY WARRANT - WARRANT",
-            "statute": "901.15-4",
-            "level": "",
+            "desc": "DRUGS-POSSESS (POSSESS CONTROLLED SUBSTANCE W/O PRESCRIPTION)",
+            "statute": "893.13-6a",
+            "level": "Felony",
             "degree": "",
             "detail": "",
             "count": 1
           }
         ],
-        "bond": 5000.0,
-        "agency": "LEE COUNTY SHERIFFS OFFICE",
-        "in_custody": true,
-        "charge_score": 3.4,
-        "photo": "mugshots/lee-1034890.jpg",
-        "photo_score": 0.54,
-        "score": 0.324,
-        "reel": "reels/lee-1034890.mp4"
+        "bond": 3000.0,
+        "agency": "FLORIDA HIGHWAY PATROL",
+        "in_custody": false,
+        "charge_score": 3.29,
+        "photo": "mugshots/lee-1034961.jpg",
+        "photo_score": 0.48,
+        "score": 0.321,
+        "reel": "reels/lee-1034961.mp4"
       },
       "posted": false,
       "posted_at": null,

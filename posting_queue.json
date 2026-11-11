@@ -159,13 +159,14 @@
         "agency": "2026CF005495AO",
         "in_custody": true,
         "charge_score": 8.4,
-        "photo": "mugshots/orange-26036789.jpg",
+        "photo": null,
         "photo_score": 0.05,
         "score": 0.621,
-        "reel": "reels/orange-26036789.mp4"
+        "reel": "reels/orange-26036789.mp4",
+        "media_id": "18148214239602378"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-11-10T19:01:07.076232-05:00",
       "id": 4
     },
     {

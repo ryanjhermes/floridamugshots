@@ -251,13 +251,14 @@
         "agency": "482026CF004349AO",
         "in_custody": true,
         "charge_score": 7.4,
-        "photo": "mugshots/orange-26037204.jpg",
+        "photo": null,
         "photo_score": 0.2,
         "score": 0.627,
-        "reel": "reels/orange-26037204.mp4"
+        "reel": "reels/orange-26037204.mp4",
+        "media_id": "17893361280622405"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-11-14T20:49:28.365711-05:00",
       "id": 5
     },
     {

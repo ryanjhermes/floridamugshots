@@ -307,13 +307,14 @@
         "agency": "Lakeland Police Department",
         "in_custody": true,
         "charge_score": 5.7,
-        "photo": "mugshots/polk-2635315.jpg",
+        "photo": null,
         "photo_score": 0.89,
         "score": 0.645,
-        "reel": "reels/polk-2635315.mp4"
+        "reel": "reels/polk-2635315.mp4",
+        "media_id": "18099104696246753"
       },
-      "posted": false,
-      "posted_at": null,
+      "posted": true,
+      "posted_at": "2026-11-21T22:04:30.529688-05:00",
       "id": 5
     },
     {

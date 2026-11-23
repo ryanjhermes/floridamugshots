@@ -64,7 +64,18 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-      - if: steps.pick.outputs.ready == '1'
+      - name: Wait for artifact to register
+        if: steps.pick.outputs.ready == '1'
+        run: sleep 15
+      - name: Deploy to GitHub Pages
+        id: deploy
+        if: steps.pick.outputs.ready == '1'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Retry Pages deploy
+        if: steps.pick.outputs.ready == '1' && steps.deploy.outcome == 'failure'
+        run: sleep 30
+      - if: steps.pick.outputs.ready == '1' && steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       - name: Wait for the Reel to be live
